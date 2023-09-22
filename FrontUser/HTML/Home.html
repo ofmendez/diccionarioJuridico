@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Diccionario Jurídico Minero-Energético</title>
+      <link rel="stylesheet" href="../CSS/StyleSheet.css">
+      <link rel="stylesheet" href="../CSS/StyleSheetExtraSmallDevices.css">
+      <link rel="stylesheet" href="../CSS/StyleSheetSmallDevices.css">
+      <link rel="stylesheet" href="../CSS/StyleSheetMediumDevices.css">
+      <link rel="stylesheet" href="../CSS/StyleSheetLargeDevices.css">
+      <link rel="stylesheet" href="../CSS/StyleSheetExtraLargeDevices.css">
+      <link rel="icon" type="image/x-icon" href="../../Public/Images/Favicon.png">
+      <meta name="view-transition" content="same-origin" />
+   </head>
+   <body>
+
+      <!-- ----------------- MENÚ LATERAL ----------------- -->
+      <!-- Menu Vertical -->
+      <div id="ContenedorMenuLateral">
+      <div class="MenuLateral" id="MenuLateral">
+         <div class="MenuLateralSeccion">
+            <img class="LogoMenuLateral" src="../../Public/Images/LogoBlanco.svg"/>
+         <ul class="MenuLateralLista">
+            <li><div class="ContenedorItemMenuLateral"><img class="IconosMenuLateral" src="../../Public/Images/Icons/Inicio.svg"/> Inicio</div></li>
+            <li><div class="ContenedorItemMenuLateral"><img class="IconosMenuLateral" src="../../Public/Images/Icons/Favoritos.svg"/> Favoritos</div></li>
+            <li><div class="ContenedorItemMenuLateral"><img class="IconosMenuLateral" src="../../Public/Images/Icons/Cronologia.svg"/> Cronología</div></li>
+            <li><div class="ContenedorItemMenuLateral"><img class="IconosMenuLateral" src="../../Public/Images/Icons/Perfil.svg"/> Perfil</div></li>
+            <li><div class="ContenedorItemMenuLateral"><img class="IconosMenuLateral" src="../../Public/Images/Icons/SitioWeb.svg"/> Visita el Sitio Web</div></li>
+            <li><a onclick="abrirMenuConfiguracion()"><div class="ContenedorItemMenuLateral"><img class="IconosMenuLateral" src="../../Public/Images/Icons/Configuracion.svg"/> Configuración</div></a></li>
+         </ul>
+      </div>
+      <div class="MenuLateralSeccion InformacionPropiedadAplicativo">
+         © 2023 Explore Diccionario
+         Jurídico Minero-Energético.
+      </div>
+      </div>
+      
+   </div>
+
+   <div class="OverlayMenu" id="OverlayMenu" onclick="cerrarMenuLateral()" style="visibility:hidden;"></div>
+
+   <!-- Menu Configuración -->
+   <div id="ContenedorMenuConfiguracion">
+      <div class="MenuConfiguracion" id="MenuConfiguracion">
+      <div class="SeccionAtrasTitulo">
+         <img class="IconoAtrasConfiguracion IconosConfiguracion" onclick="abrirMenuLateral()" src="../../Public/Images/Icons/Atras.svg"/> 
+          <p>Configuración</p>
+         <img class="IconoCerrarConfiguracion IconosConfiguracion" onclick="cerrarMenuLateral()" src="../../Public/Images/Icons/Cerrar.svg"/>
+      </div>
+      <div class="SelectoresConfiguracion">
+         <table class="TablaTamanosFuente">
+            <tr>
+            <td onclick="decrecerTamañoFuente()" id="ConfiguracionAchicarLetra">Aa</td>
+            <td onclick="incrementarTamañoFuente()" id="ConfiguracionAgrandarLetra">Aa</td>
+         </tr>
+         </table>
+         <table class="TablaConfiguracionModo ModoActivo" onclick="ejecutarModoClaro()" id="TablaModoClaro">
+            <tr>
+            <td id="ConfiguracionModoClaro"><img src="../../Public/Images/Icons/ModoClaro.svg"/></td>
+         </tr>
+         </table>
+         <table class="TablaConfiguracionModo" onclick="ejecutarModoOscuro()" id="TablaModoOscuro">
+            <tr>
+            <td id="ConfiguracionModoOscuro"><img src="../../Public/Images/Icons/ModoOscuro.svg"/></td>
+         </tr>
+         </table>
+      </div>
+      </div>
+   </div>
+
+      <!-- ----------------- CONTENIDO PÁGINA ----------------- -->
+      <!-- -------- Seccion Fija Titulo y Buscador -------- -->
+    
+      <!-- Seccion Header -->
+      <div class="SeccionHeaderFija" id="SeccionHeaderFija">
+         <div class="SeccionHeader">
+         <div class="SeccionHeaderIzquierda"><a onclick="abrirMenuLateral()"><img class="IconoMenu" src="../../Public/Images/Icons/Menu.svg"/></a></div>
+         <div class="SeccionHeaderDerecha"><img class="LogoPrincipal" src="../../Public/Images/LogoPositivo.svg"/></div>
+      </div>
+      <div class="SeparadorSecciones"></div>
+      <!-- Seccion Buscador -->
+      <div class="SeccionBuscador">
+         <form class="FormaBuscador" action="/action_page.php">
+            <div class="SeccionInputBuscador">
+               <img class="IconoLupa" src="../../Public/Images/Icons/Lupa.svg"/>
+               <input class="InputBuscador" type="text" placeholder="Ingresa un término" name="buscar">
+            </div>
+            <input class="SubmitBusqueda" type="submit" value="BUSCAR"></div>
+         </form>
+      </div>
+   </div>
+    
+
+      <div id="MedidaAlturaBarraFija"></div>
+
+      <!-- -------- Seccion Contenido -------- -->
+      <div class="ContenidoPagina" id="ContenidoPagina">
+      <!-- Contenido Texto Explicacion -->
+      <p>Bienvenido a Explore el Diccionario Jurídico Minero-Energético.</p>
+      <br>
+      <p>Escribe una palabra en la caja de texto en la parte superior de la página para encontrar su deﬁnición.</p>
+      <div class="SeparadorSeccionPrincipal"></div>
+      <!-- Contenido Palabra del Dia -->
+      <h2>Palabra del día</h2>
+      <div class="SeparadorSecciones"></div>
+      <div class="SeccionPalabraDia">
+         <div class="PalabraDia">Regalías - <i>Ver definición</i></div>
+         <img class="IconoAgregarFavorito" src="../../Public/Images/Icons/AgregarFavorito.svg"/>
+      </div>
+      <div class="SeparadorSeccionPrincipal"></div>
+      <!-- Contenido Busquedas Recientes -->
+      <h2>Búsquedas Recientes</h2>
+      <div class="SeparadorSecciones"></div>
+      <div class="SeccionBusquedasRecientes">
+         <div class="ElementoBusquedaReciente">
+            <div class="TextoBusquedaReciente">Regalías</div>
+            <div class="IconobusquedaReciente"><img class="IconoAbrir" src="../../Public/Images/Icons/Abrir.svg"/></div>
+         </div>
+         <hr>
+         <div class="ElementoBusquedaReciente">
+            <div class="TextoBusquedaReciente">Regalías</div>
+            <div class="IconobusquedaReciente"><img class="IconoAbrir" src="../../Public/Images/Icons/Abrir.svg"/></div>
+         </div>
+         <hr>
+         <div class="ElementoBusquedaReciente">
+            <div class="TextoBusquedaReciente">Regalías</div>
+            <div class="IconobusquedaReciente"><img class="IconoAbrir" src="../../Public/Images/Icons/Abrir.svg"/></div>
+         </div>
+      </div>
+      <div id="AlturaAtajosAsignada"></div>
+      </div>
+
+      <!-- ----------------- SECCIÓN INFERIOR ATAJOS FIXED ----------------- -->
+      <!-- Seccion Atajos -->
+      <div class="SeccionAtajos" id="AlturaMenuAtajos">
+        <div class="ElementoAtajo"><img class="IconoAtajos IconoAtajoActivo" src="../../Public/Images/Icons/Inicio.svg"/><br>Inicio</div>
+        <div class="ElementoAtajo"><img class="IconoAtajos" src="../../Public/Images/Icons/Favoritos.svg"/><br>Favoritos</div>
+        <div class="ElementoAtajo"><img class="IconoAtajos" src="../../Public/Images/Icons/Cronologia.svg"/><br>Cronología</div>
+      </div>
+
+      <!-- ----------------- SCRIPTS ----------------- -->
+      <script>
+
+    // Definición altura barra fija
+     function definirMedidasBarras() {
+        var AlturaBarraFija = document.getElementById('SeccionHeaderFija').clientHeight;
+        document.getElementById('MedidaAlturaBarraFija').style.height = AlturaBarraFija + 'px';
+
+    // Definición altura atajos
+        var AlturaAtajos = document.getElementById('AlturaMenuAtajos').clientHeight;
+        document.getElementById('AlturaAtajosAsignada').style.height = AlturaAtajos + 'px';
+    }
+
+    definirMedidasBarras();
+
+    addEventListener("resize", (event) => {
+        definirMedidasBarras();
+    });
+
+    // Definición Medida Ancho Menu Lateral
+    function definirMedidaMenuLateral(){
+      var anchoMenuLateral = document.getElementById('MenuLateral').clientWidth;
+      if (window.innerWidth > 1250){
+    
+    document.documentElement.style.setProperty('--SeccionDerechaTamanoAutomatico', window.innerWidth - anchoMenuLateral +'px');
+    document.documentElement.style.setProperty('--SeccionesDerechaMenuAncho', anchoMenuLateral +'px');
+    } else if (window.innerWidth > 992) {
+      document.documentElement.style.setProperty('--SeccionesDerechaMenuAncho', anchoMenuLateral +'px');
+    }else if (window.innerWidth < 991) {
+      document.documentElement.style.setProperty('--SeccionesDerechaMenuAncho', '0px');
+    }
+
+    
+   }
+
+    definirMedidaMenuLateral();
+
+    addEventListener("resize", (event) => {
+      definirMedidaMenuLateral();
+    });
+
+    // Funacionamientos Menús
+    function abrirMenuLateral() {
+        document.getElementById('MenuLateral').classList.add('slide-in');
+        document.getElementById('MenuLateral').classList.remove('slide-out');
+        document.getElementById('OverlayMenu').classList.add('overlay-in');
+        document.getElementById('OverlayMenu').classList.remove('overlay-out');
+        document.getElementById('MenuConfiguracion').classList.add('slide-down');
+        document.getElementById('MenuConfiguracion').classList.remove('slide-up');
+    }
+
+    function cerrarMenuLateral() {
+        document.getElementById('MenuLateral').classList.add('slide-out');
+        document.getElementById('MenuLateral').classList.remove('slide-in');
+        document.getElementById('OverlayMenu').classList.add('overlay-out');
+        document.getElementById('OverlayMenu').classList.remove('overlay-in');
+        document.getElementById('MenuConfiguracion').classList.add('slide-down');
+        document.getElementById('MenuConfiguracion').classList.remove('slide-up');
+        document.getElementById('ContenedorMenuConfiguracion').classList.add('z-index-down');
+        document.getElementById('ContenedorMenuConfiguracion').classList.remove('z-index-up');
+    }
+
+    function abrirMenuConfiguracion() {
+        document.getElementById('MenuLateral').classList.add('slide-out');
+        document.getElementById('MenuLateral').classList.remove('slide-in');
+        document.getElementById('OverlayMenu').classList.add('overlay-in');
+        document.getElementById('OverlayMenu').classList.remove('overlay-out');
+        document.getElementById('MenuConfiguracion').classList.add('slide-up');
+        document.getElementById('MenuConfiguracion').classList.remove('slide-down');
+        document.getElementById('ContenedorMenuConfiguracion').classList.add('z-index-up');
+        document.getElementById('ContenedorMenuConfiguracion').classList.remove('z-index-down');
+    }
+
+    function ejecutarModoClaro() {
+        document.getElementById('TablaModoClaro').classList.add('ModoActivo');
+        document.getElementById('TablaModoOscuro').classList.remove('ModoActivo');
+        document.documentElement.style.setProperty('--ColorFondos', '#F0F2F1');
+        document.documentElement.style.setProperty('--ColorSecundario', '#ffffff');
+        document.documentElement.style.setProperty('--ColorTexto', '#000000');
+        document.documentElement.style.setProperty('--FiltroNegativo', 'none');
+        document.documentElement.style.setProperty('--ColorFondosHover', '#dfdfdf');
+    }
+
+    function ejecutarModoOscuro() {
+        document.getElementById('TablaModoOscuro').classList.add('ModoActivo');
+        document.getElementById('TablaModoClaro').classList.remove('ModoActivo');
+        document.documentElement.style.setProperty('--ColorFondos', '#282828');
+        document.documentElement.style.setProperty('--ColorSecundario', '#000000');
+        document.documentElement.style.setProperty('--ColorTexto', '#ffffff');
+        document.documentElement.style.setProperty('--FiltroNegativo', 'invert(1)');
+        document.documentElement.style.setProperty('--ColorFondosHover', '#141414');
+    }
+
+    function decrecerTamañoFuente() {
+        var getTamanoH2 = getComputedStyle(document.documentElement).getPropertyValue('--TamanoFuenteTitulosH2').replace("px", "");
+        var getTamanoFuente = getComputedStyle(document.documentElement).getPropertyValue('--TamanoFuenteParrafos').replace("px", "");
+        var getTamanoPadding = getComputedStyle(document.documentElement).getPropertyValue('--PaddingElementos').replace("%", "");
+        if (getTamanoFuente <= 11) {
+            getTamanoFuente = 11;
+        } else {
+            document.documentElement.style.setProperty('--TamanoFuenteTitulosH2', Number(getTamanoH2) - 1 + 'px');
+            document.documentElement.style.setProperty('--TamanoFuenteParrafos', Number(getTamanoFuente) - 1 + 'px');
+            document.documentElement.style.setProperty('--PaddingElementos', Number(getTamanoPadding) - 0.2 + '%');
+            definirMedidasBarras();
+        }
+    }
+
+    function incrementarTamañoFuente() {
+        var getTamanoH2 = getComputedStyle(document.documentElement).getPropertyValue('--TamanoFuenteTitulosH2').replace("px", "");
+        var getTamanoFuente = getComputedStyle(document.documentElement).getPropertyValue('--TamanoFuenteParrafos').replace("px", "");
+        var getTamanoPadding = getComputedStyle(document.documentElement).getPropertyValue('--PaddingElementos').replace("%", "");
+        if (getTamanoFuente >= 18) {
+            getTamanoFuente = 18;
+        } else {
+            document.documentElement.style.setProperty('--TamanoFuenteTitulosH2', Number(getTamanoH2) + 1 + 'px');
+            document.documentElement.style.setProperty('--TamanoFuenteParrafos', Number(getTamanoFuente) + 1 + 'px');
+            document.documentElement.style.setProperty('--PaddingElementos', Number(getTamanoPadding) + 0.2 + '%');
+            definirMedidasBarras();
+        }
+    }
+</script>
+</body>
+</html>

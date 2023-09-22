@@ -1,0 +1,27 @@
+/*Horizontal Tablet Lenovo*/
+@media only screen and (min-width: 1200px) {
+    *{
+       /* background-color: #ffff0011;*/
+       }
+
+       :root {
+        /*Estilos*/
+         --MargenesContenido:30px;
+         --PaddingElementos:1%;
+        /*Menu Lateral*/
+         --MenuAncho: 22vw;
+         --MenuAnchoMaxWidth: 280px;
+         --MenuPadding:30px;
+         /*Búsquedas Recientes*/
+        --PaddingBusquedasRecientes:10px;
+         /*Sección Derecha*/
+        --SeccionesDerechaAncho: calc(100vw - var(--MenuAncho));
+        --SeccionesDerechaMenuAncho:22vw;
+       }
+}
+
+@media only screen and (min-width: 1250px) {
+        :root{
+            --SeccionesDerechaAncho: var(--SeccionDerechaTamanoAutomatico);
+        }
+}
