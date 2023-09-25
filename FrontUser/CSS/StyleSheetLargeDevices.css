@@ -23,16 +23,16 @@
         --TamanoFuenteTitulosH1: 40px;
         --TamanoFuenteTitulosH2: 22px;
         --TamanoFuenteParrafos: 14px;
-        /*Iconos*/
+       /*Iconos*/
         --AlturaIconosConfiguracion: 18px;
        /* Ocultar Elementos */
         --OcultarElemento: none;
        /*Buscador*/
-         --BuscadorPaddingLupa:2%;
-         --BuscadorDisplayBoton: block;
-         --BuscadorInputWidth: 80%;
-         --BuscadorSubmitWidth:20%;
-         --BuscadorSeparaciónSubmit: 2%;
+        --BuscadorPaddingLupa:2%;
+        --BuscadorDisplayBoton: block;
+        --BuscadorInputWidth: 80%;
+        --BuscadorSubmitWidth:20%;
+        --BuscadorSeparaciónSubmit: 2%;
        /*Búsquedas Recientes*/
         --PaddingBusquedasRecientes:1.5%;
        /*Sección Derecha*/

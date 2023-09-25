@@ -28,6 +28,10 @@
      --MenuLateralEsconderAnimacion: translateX(-115%);
      --MenuOcultarHamburguesa: block;
     /*Configuración*/
+     --ConfiguracionAnchoContenedor: var(--SeccionesDerechaAncho);
+     --ConfiguracionPosicionBottom: 0;
+     --ConfiguracionSeccionDerechaValorLeft: auto;
+     --ConfiguracionSeccionDerechaValorRight: 0;
      --ConfiguracionPaddingContenedor:6%;
      --ConfiguracionBotonAtrasDisplay:block;
      --ConfiguracionBotonCerrarDisplay:none;
@@ -37,6 +41,7 @@
     /*Fuentes*/
      --TamanoFuenteTitulosH1: 40px;
      --TamanoFuenteTitulosH2: 22px;
+     --TamanoFuenteTitulosH3: 20px;
      --TamanoFuenteParrafos: 14px;
      --TamanoFuenteMenor: 12px;
      --FuenteTipografia: 'Poppins', sans-serif;
@@ -58,19 +63,21 @@
      --SeparadorSecciones: 2vh;
      --FiltroNegativo: none;
     /*Buscador*/
-    --BuscadorPaddingLupa:6%;
-    --BuscadorDisplayBoton: none;
-    --BuscadorInputWidth: 100%;
-    --BuscadorSubmitWidth:0%;
-    --BuscadorSeparaciónSubmit: 0%;
+     --BuscadorPaddingLupa:6%;
+     --BuscadorDisplayBoton: none;
+     --BuscadorInputWidth: 100%;
+     --BuscadorSubmitWidth:0%;
+     --BuscadorSeparaciónSubmit: 0%;
     /*Búsquedas Recientes*/
-    --PaddingBusquedasRecientes:4%;
+     --PaddingBusquedasRecientes:4%;
     /*Sección Derecha*/
      --SeccionesDerechaAncho: 100vw;
      --SeccionesDerechaMenuAncho: 0;
      --SeccionDerechaValorLeft: 0;
      --SeccionDerechaValorRight: auto;
      --SeccionDerechaTamanoAutomatico: 1000px;
+    /*Sección Palabra del Día*/
+     --SeccionPalabraDelDiaAtajoDisplay: block;
 }
 /* Configuración General */
  *{
@@ -81,13 +88,14 @@
      transition: background-color 0.5s, color 0.05s, filter 0.5s, border 0.5s;
      -webkit-tap-highlight-color: transparent;
      user-select: none;
-        -moz-user-select: none;
-        -khtml-user-select: none;
-        -webkit-user-select: none;
-        -o-user-select: none;
+     -moz-user-select: none;
+     -khtml-user-select: none;
+     -webkit-user-select: none;
+     -o-user-select: none;
 }
  body{
      background-color: var(--ColorFondos);
+     overflow-x: hidden;
 }
  a{
      text-decoration: none;
@@ -108,6 +116,10 @@
      font-weight: var(--FuenteNegrilla);
      color:var(--ColorTexto);
 }
+ h3{
+     font-size: var(--TamanoFuenteTitulosH3) !important;
+     font-weight: var(--FuenteNegrilla);
+}
  ul{
      list-style: none;
 }
@@ -116,16 +128,30 @@
      margin:0 auto;
      border: 1px solid var(--ColorPlaceholder);
 }
+/* Configuración Scroll */
+ .ScrollVerde::-webkit-scrollbar {
+     width: 6px;
+    /* width */
+}
+ .ScrollVerde::-webkit-scrollbar-track {
+     background: var(--ColorAcentoHover);
+    /* Track */
+     border-radius: var(--RadioEsquinas);
+}
+ .ScrollVerde::-webkit-scrollbar-thumb {
+     background: var(--ColorFondos);
+    /* Handle */
+     border-radius: var(--RadioEsquinas);
+}
+ .ScrollVerde::-webkit-scrollbar-thumb:hover {
+     background: var(--ColorFondosHover);
+    /* Handle on hover */
+}
  .TextoColorAcento{
      color: var(--ColorAcento);
 }
-
  .IconoAbrir{
      height:var(--AlturaIconoAbrir);
-}
- .IconosMenuLateral{
-     height:var(--AlturaIconosMenuLateral);
-     margin-right:10px;
 }
  .LogoPrincipal{
      height:var(--AlturaLogoPrincipal);
@@ -140,6 +166,9 @@
  .SeparadorSecciones{
      height: var(--SeparadorSecciones);
 }
+ .ContenedorAplicativo{
+     background-color: var(--ColorFondos);
+}
 /* ----------------- CONFIGURACIÓN LOGIN -----------------*/
 /* Configuración Sección Login */
  .SeccionLogin{
@@ -150,11 +179,21 @@
      width:80%;
      max-width:380px;
 }
+ .LogoLogin{
+     width:80%;
+     display: block;
+     margin: 0 auto;
+     padding-bottom: var(--SeparadorSecciones);
+}
  .FormaLogin{
      display: flex;
      flex-direction: column;
      flex-wrap: nowrap;
      justify-content: space-between;
+}
+ .IconosLogin{
+     height:var(--AlturaIconosMenuLateral);
+     margin-right:10px;
 }
  .FilaLogin{
      width:100%;
@@ -164,6 +203,8 @@
      background-color: var(--ColorSecundario);
      border-radius: var(--RadioEsquinas);
      padding: var(--PaddingElementos);
+     display: flex;
+     align-items: center;
 }
  .SubmitLogin{
      width: 100%;
@@ -209,10 +250,32 @@
      cursor: pointer;
 }
  .MenuLateralLista li{
-     margin-bottom: var(--MenuSeparacionElementos);  
+     margin-bottom: var(--MenuSeparacionElementos);
 }
-.MenuLateralLista li:hover{
-    text-decoration: underline;  
+ .MenuLateral a:visited, .MenuLateral a:active, .MenuLateral a{
+     color: white;
+}
+ .MenuLateralLista li:hover{
+     text-decoration: underline;
+}
+ .ItemMenuActivo{
+     background-color: white;
+     color:var(--ColorAcento);
+     border-radius: var(--RadioEsquinas);
+     padding: var(--PaddingElementos);
+     padding-left: 0;
+}
+ .ItemMenuActivo:hover{
+     text-decoration: underline;
+}
+ .ItemMenuActivo img{
+     filter: none;
+}
+ .IconosMenuLateral{
+     height:var(--AlturaIconosMenuLateral);
+     margin-right:10px;
+     padding-left:10px;
+     filter: brightness(100);
 }
  .InformacionPropiedadAplicativo{
      font-size: calc(var(--TamanoFuenteParrafos) - 2px);
@@ -230,14 +293,13 @@
 }
 /* Configuración Menú Configuración*/
  #ContenedorMenuConfiguracion{
-     width: 100vw;
      overflow: hidden;
      position: fixed;
-     bottom:0;
+     bottom: var(--ConfiguracionPosicionBottom);
      z-index:0;
-     width:var(--SeccionesDerechaAncho);
-     left: var(--SeccionDerechaValorLeft);
-     right: var(--SeccionDerechaValorRight);
+     width: var(--ConfiguracionAnchoContenedor);
+     left: var(--ConfiguracionSeccionDerechaValorLeft);
+     right: var(--ConfiguracionSeccionDerechaValorRight);
 }
  .MenuConfiguracion{
      width: 100%;
@@ -254,19 +316,18 @@
      justify-content: space-between;
 }
  .IconoAtrasConfiguracion{
-    display:var(--ConfiguracionBotonAtrasDisplay);
-    height:var(--AlturaIconoAtras);
-    filter: var(--FiltroNegativo);
-    cursor: pointer;
+     display:var(--ConfiguracionBotonAtrasDisplay);
+     height:var(--AlturaIconoAtras);
+     filter: var(--FiltroNegativo);
+     cursor: pointer;
 }
-.IconosConfiguracion{
-   height:var(--AlturaIconosConfiguracion);
+ .IconosConfiguracion{
+     height:var(--AlturaIconosConfiguracion);
 }
-
  .IconoCerrarConfiguracion{
-    display:var(--ConfiguracionBotonCerrarDisplay);
-    filter: var(--FiltroNegativo);
-    cursor: pointer;
+     display:var(--ConfiguracionBotonCerrarDisplay);
+     filter: var(--FiltroNegativo);
+     cursor: pointer;
 }
  .SelectoresConfiguracion{
      display: flex;
@@ -284,8 +345,8 @@
      width: var(--ConfiguracionAnchoBotonesTamañoLetra);
      text-align: center;
 }
-.TablaTamanosFuente td:hover {
-    text-decoration: underline;
+ .TablaTamanosFuente td:hover {
+     text-decoration: underline;
 }
  #ConfiguracionAchicarLetra {
      border-right: 2px solid var(--ColorTexto);
@@ -295,23 +356,23 @@
      border-radius: var(--RadioEsquinas);
      height: 50px;
 }
-.TablaConfiguracionModo:hover{
-    background-color: var(--ColorFondosHover);
+ .TablaConfiguracionModo:hover{
+     background-color: var(--ColorFondosHover);
 }
  .TablaConfiguracionModo td {
-    width: var(--ConfiguracionAnchoBotonesModo);
+     width: var(--ConfiguracionAnchoBotonesModo);
      text-align: center;
      vertical-align: middle;
      cursor: pointer;
 }
-.ModoActivo{
-    background-color: var(--ColorAcento);
+ .ModoActivo{
+     background-color: var(--ColorAcento);
 }
-.ModoActivo:hover{
-    background-color: var(--ColorAcento);
+ .ModoActivo:hover{
+     background-color: var(--ColorAcento);
 }
-.ModoActivo td{
-    cursor: default !important;
+ .ModoActivo td{
+     cursor: default !important;
 }
  .TablaConfiguracionModo img {
      width: 32px;
@@ -384,7 +445,7 @@
      order:1;
 }
  .IconoMenu{
-    height:var(--AlturaIconoMenu);
+     height:var(--AlturaIconoMenu);
      filter: var(--FiltroNegativo);
      display: var(--MenuOcultarHamburguesa);
 }
@@ -392,23 +453,22 @@
      order:2;
 }
 /* Configuración Buscador */
-
  .FormaBuscador{
      display: flex;
      flex-direction: row;
      flex-wrap: nowrap;
      justify-content: space-between;
 }
-.SeccionInputBuscador{
-    display: flex;
+ .SeccionInputBuscador{
+     display: flex;
      flex-direction: row;
-    background-color: var(--ColorSecundario);
-    padding: var(--PaddingElementos);
-    border-radius: var(--RadioEsquinas);
-    width: var(--BuscadorInputWidth);
+     background-color: var(--ColorSecundario);
+     padding: var(--PaddingElementos);
+     border-radius: var(--RadioEsquinas);
+     width: var(--BuscadorInputWidth);
 }
-.IconoLupa{
-    height:var(--AlturaIconoLupa);
+ .IconoLupa{
+     height:var(--AlturaIconoLupa);
 }
  .InputBuscador{
      flex-grow: 2;
@@ -418,20 +478,20 @@
      padding-left: var(--BuscadorPaddingLupa);
      font-size: var(--TamanoFuenteParrafos);
 }
-.SubmitBusqueda{
-    border: 0 solid transparent;
-    padding: var(--PaddingElementos);
-    display: var(--BuscadorDisplayBoton);
-    background-color: var(--ColorAcento);
-    color: var(--ColorTextoAcento);
-    border-radius: var(--RadioEsquinas);
-    width: var(--BuscadorSubmitWidth);
-    margin-left: var(--BuscadorSeparaciónSubmit);
-    font-weight: var(--FuenteNegrilla);
-    cursor: pointer;
+ .SubmitBusqueda{
+     border: 0 solid transparent;
+     padding: var(--PaddingElementos);
+     display: var(--BuscadorDisplayBoton);
+     background-color: var(--ColorAcento);
+     color: var(--ColorTextoAcento);
+     border-radius: var(--RadioEsquinas);
+     width: var(--BuscadorSubmitWidth);
+     margin-left: var(--BuscadorSeparaciónSubmit);
+     font-weight: var(--FuenteNegrilla);
+     cursor: pointer;
 }
-.SubmitBusqueda:hover{
-    background-color: var(--ColorAcentoHover);
+ .SubmitBusqueda:hover{
+     background-color: var(--ColorAcentoHover);
 }
 /* Configuración ContenedorPágina */
  .ContenidoPagina{
@@ -439,7 +499,13 @@
      width: var(--SeccionesDerechaAncho);
      margin-left: var(--SeccionesDerechaMenuAncho);
 }
-/* Configuración Palabra del Dia */
+ .ColumnaDerecha{
+     display: none;
+}
+/* Configuración Palabra del Dia Atajo */
+ .SeccionPalabraDelDiaAtajo{
+     display: var(--SeccionPalabraDelDiaAtajoDisplay);
+}
  .SeccionPalabraDia{
      background-color: var(--ColorAcento);
      color: var(--ColorTextoAcento);
@@ -453,19 +519,44 @@
      border-radius: var(--RadioEsquinas);
      cursor: pointer;
 }
-.SeccionPalabraDia:hover{
-    background-color: var(--ColorAcentoHover);
+ .SeccionPalabraDia:hover{
+     background-color: var(--ColorAcentoHover);
 }
-.IconoAgregarFavorito{
-    height:var(--AlturaIconoAgregarFavorito);
-    opacity: 0.5;
-    cursor: pointer;
-    transition: opacity 0.5s;
+ .IconoAgregarFavorito{
+     height:var(--AlturaIconoAgregarFavorito);
+     opacity: 0.5;
+     cursor: pointer;
+     transition: opacity 0.5s;
 }
-.IconoAgregarFavorito:hover{
-    opacity: 1;
+ .IconoAgregarFavorito:hover{
+     opacity: 1;
 }
-
+/*Configuración Palabra del día Widget */
+ .ContenidoPalabradelDia{
+     background-color: var(--ColorAcento);
+     color: var(--ColorTextoAcento);
+     font-size: var(--TamanoFuenteParrafos);
+     padding: calc(var(--PaddingElementos)*2);
+     border-radius: var(--RadioEsquinas);
+}
+ .ContenedorPalabraIconoWidgetPalabraDelDia{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+ .ListadoDescripciones{
+     overflow-y: auto;
+     padding: 0 calc(var(--MargenesContenido)/2) calc(var(--MargenesContenido)/2) calc(var(--MargenesContenido)/2);
+     min-height: 300px;
+}
+ .ConceptoDefinicion{
+     font-weight: var(--FuenteNegrilla);
+}
+ .DefinicionPalabraDelDia{
+     width:100%;
+     flex-basis: 100%;
+     text-align: justify;
+}
 /* Configuración Busquedas Recientes */
  .SeccionBusquedasRecientes{
      background-color: var(--ColorSecundario);
@@ -482,8 +573,8 @@
      cursor: pointer;
      align-items: center;
 }
-.ElementoBusquedaReciente:hover{
-    text-decoration: underline;
+ .ElementoBusquedaReciente:hover{
+     text-decoration: underline;
 }
  .TextoBusquedaReciente{
      font-size: var(--TamanoFuenteParrafos);
@@ -512,7 +603,9 @@
  .IconoAtajos {
      height:var(--AlturaIconosAtajos);
      opacity: 0.5;
+     filter: brightness(100);
 }
  .IconoAtajoActivo {
      opacity: 1;
 }
+ 

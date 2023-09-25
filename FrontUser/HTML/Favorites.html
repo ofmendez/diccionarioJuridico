@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Diccionario Jurídico Minero-Energético</title>
+      <link rel="stylesheet" href="../CSS/StyleSheet.css">
+      <link rel="stylesheet" href="../CSS/StyleSheetExtraSmallDevices.css">
+      <link rel="stylesheet" href="../CSS/StyleSheetSmallDevices.css">
+      <link rel="stylesheet" href="../CSS/StyleSheetMediumDevices.css">
+      <link rel="stylesheet" href="../CSS/StyleSheetLargeDevices.css">
+      <link rel="stylesheet" href="../CSS/StyleSheetExtraLargeDevices.css">
+      <link rel="icon" type="image/x-icon" href="../../Public/Images/Favicon.png">
+      <meta name="view-transition" content="same-origin" />
+   </head>
+   <body>
+      <div class="ContenedorAplicativo">
+
+
+         <!-- ----------------- INICIO MENÚ LATERAL ----------------- -->
+         <!-- Menu Vertical -->
+         <div id="ContenedorMenuLateral">
+            <div class="MenuLateral" id="MenuLateral">
+               <div class="MenuLateralSeccion">
+                  <img class="LogoMenuLateral" src="../../Public/Images/LogoBlanco.svg"/>
+                  <ul class="MenuLateralLista">
+                     <li>
+                        <a href="Home.html"><div class="ContenedorItemMenuLateral"><img class="IconosMenuLateral" src="../../Public/Images/Icons/Inicio.svg"/> Inicio</div></a>
+                     </li>
+                     <li>
+                        <a href="Favorites.html"><div class="ContenedorItemMenuLateral ItemMenuActivo"><img class="IconosMenuLateral" src="../../Public/Images/Icons/Favoritos.svg"/> Favoritos</div></a>
+                     </li>
+                     <li>
+                        <a href="History.html"><div class="ContenedorItemMenuLateral"><img class="IconosMenuLateral" src="../../Public/Images/Icons/Cronologia.svg"/> Cronología</div></a>
+                     </li>
+                     <li>
+                        <a href="Perfil.html"><div class="ContenedorItemMenuLateral"><img class="IconosMenuLateral" src="../../Public/Images/Icons/Perfil.svg"/> Perfil</div></a>
+                     </li>
+                     <li>
+                        <a href="https://www.google.com" target="_blank"><div class="ContenedorItemMenuLateral"><img class="IconosMenuLateral" src="../../Public/Images/Icons/SitioWeb.svg"/> Visita el Sitio Web</div></a>
+                     </li>
+                     <li>
+                        <a onclick="abrirMenuConfiguracion()">
+                           <div class="ContenedorItemMenuLateral"><img class="IconosMenuLateral" src="../../Public/Images/Icons/Configuracion.svg"/> Configuración</div>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="MenuLateralSeccion InformacionPropiedadAplicativo">
+                  © 2023 Explore Diccionario
+                  Jurídico Minero-Energético.
+               </div>
+            </div>
+         </div>
+         <!-- Overlay -->
+         <div class="OverlayMenu" id="OverlayMenu" onclick="cerrarMenuLateral()" style="visibility:hidden;"></div>
+         <!-- Menu Configuración -->
+         <div id="ContenedorMenuConfiguracion">
+            <div class="MenuConfiguracion" id="MenuConfiguracion">
+               <div class="SeccionAtrasTitulo">
+                  <img class="IconoAtrasConfiguracion IconosConfiguracion" onclick="abrirMenuLateral()" src="../../Public/Images/Icons/Atras.svg"/> 
+                  <p>Configuración</p>
+                  <img class="IconoCerrarConfiguracion IconosConfiguracion" onclick="cerrarMenuLateral()" src="../../Public/Images/Icons/Cerrar.svg"/>
+               </div>
+               <div class="SelectoresConfiguracion">
+                  <table class="TablaTamanosFuente">
+                     <tr>
+                        <td onclick="decrecerTamañoFuente()" id="ConfiguracionAchicarLetra">Aa</td>
+                        <td onclick="incrementarTamañoFuente()" id="ConfiguracionAgrandarLetra">Aa</td>
+                     </tr>
+                  </table>
+                  <table class="TablaConfiguracionModo ModoActivo" onclick="ejecutarModoClaro()" id="TablaModoClaro">
+                     <tr>
+                        <td id="ConfiguracionModoClaro"><img src="../../Public/Images/Icons/ModoClaro.svg"/></td>
+                     </tr>
+                  </table>
+                  <table class="TablaConfiguracionModo" onclick="ejecutarModoOscuro()" id="TablaModoOscuro">
+                     <tr>
+                        <td id="ConfiguracionModoOscuro"><img src="../../Public/Images/Icons/ModoOscuro.svg"/></td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <!-- ----------------- FIN MENÚ LATERAL ----------------- -->
+
+
+         <!-- ----------------- INICIO FRANJA SUPERIOR BUSCADOR ----------------- -->
+         <!-- Seccion Menú y Logo -->
+         <div class="SeccionHeaderFija" id="SeccionHeaderFija">
+            <div class="SeccionHeader">
+               <div class="SeccionHeaderIzquierda"><a onclick="abrirMenuLateral()"><img class="IconoMenu" src="../../Public/Images/Icons/Menu.svg"/></a></div>
+               <div class="SeccionHeaderDerecha"><img class="LogoPrincipal" src="../../Public/Images/LogoPositivo.svg"/></div>
+            </div>
+            <div class="SeparadorSecciones"></div>
+            <!-- Seccion Buscador -->
+            <div class="SeccionBuscador">
+               <form class="FormaBuscador" action="/action_page.php">
+                  <div class="SeccionInputBuscador">
+                     <img class="IconoLupa" src="../../Public/Images/Icons/Lupa.svg"/>
+                     <input class="InputBuscador" type="text" placeholder="Ingresa un término" name="buscar">
+                  </div>
+                  <input class="SubmitBusqueda" type="submit" value="BUSCAR">
+            </div>
+            </form>
+         </div>
+         <div id="MedidaAlturaBarraFija"></div>
+         <!-- ----------------- FIN FRANJA SUPERIOR BUSCADOR ----------------- -->
+
+
+         <!-- ----------------- INICIO CONTENIDO PÁGINA ----------------- -->
+         <div class="ContenidoPagina" id="ContenidoPagina">
+
+            <!-- ----------------- INICIO CONTENIDO COLUMNA IZQUIERDA ----------------- -->
+            <div class="ColumnaIzquierda">
+               <!-- Contenido Texto Explicacion -->
+               Izquierda
+            </div>
+            <!-- ----------------- FIN CONTENIDO COLUMNA IZQUIERDA ----------------- -->
+
+
+            <!-- ----------------- INICIO CONTENIDO COLUMNA DERECHA ----------------- -->
+            <div class="ColumnaDerecha">
+               Derecha
+            </div>
+            <!-- ----------------- FIN CONTENIDO COLUMNA DERECHA ----------------- -->
+
+
+            <!-- ----------------- INICIO SECCIÓN INFERIOR ATAJOS FIXED ----------------- -->
+            <div id="AlturaAtajosAsignada"></div>
+         </div>
+         <!-- Seccion Atajos -->
+         <div class="SeccionAtajos" id="AlturaMenuAtajos">
+            <div class="ElementoAtajo"><img class="IconoAtajos IconoAtajoActivo" src="../../Public/Images/Icons/Inicio.svg"/><br>Inicio</div>
+            <div class="ElementoAtajo"><img class="IconoAtajos" src="../../Public/Images/Icons/Favoritos.svg"/><br>Favoritos</div>
+            <div class="ElementoAtajo"><img class="IconoAtajos" src="../../Public/Images/Icons/Cronologia.svg"/><br>Cronología</div>
+         </div>
+
+         <!-- ----------------- FIN SECCIÓN INFERIOR ATAJOS FIXED ----------------- -->
+
+     
+         <!-- ----------------- IMPORT JS ----------------- -->
+         <script src="../JS/JS.js"></script>
+</div>
+</body>
+</html>
