@@ -16,8 +16,6 @@
    </head>
    <body>
       <div class="ContenedorAplicativo">
-
-
          <!-- ----------------- INICIO MENÚ LATERAL ----------------- -->
          <!-- Menu Vertical -->
          <div id="ContenedorMenuLateral">
@@ -26,19 +24,29 @@
                   <img class="LogoMenuLateral" src="../../Public/Images/LogoBlanco.svg"/>
                   <ul class="MenuLateralLista">
                      <li>
-                        <a href="Home.html"><div class="ContenedorItemMenuLateral ItemMenuActivo"><img class="IconosMenuLateral" src="../../Public/Images/Icons/Inicio.svg"/> Inicio</div></a>
+                        <a href="Home.html">
+                           <div class="ContenedorItemMenuLateral ItemMenuActivo"><img class="IconosMenuLateral" src="../../Public/Images/Icons/Inicio.svg"/> Inicio</div>
+                        </a>
                      </li>
                      <li>
-                        <a href="Favorites.html"><div class="ContenedorItemMenuLateral"><img class="IconosMenuLateral" src="../../Public/Images/Icons/Favoritos.svg"/> Favoritos</div></a>
+                        <a href="Favorites.html">
+                           <div class="ContenedorItemMenuLateral"><img class="IconosMenuLateral" src="../../Public/Images/Icons/Favoritos.svg"/> Favoritos</div>
+                        </a>
                      </li>
                      <li>
-                        <a href="History.html"><div class="ContenedorItemMenuLateral"><img class="IconosMenuLateral" src="../../Public/Images/Icons/Cronologia.svg"/> Cronología</div></a>
+                        <a href="History.html">
+                           <div class="ContenedorItemMenuLateral"><img class="IconosMenuLateral" src="../../Public/Images/Icons/Cronologia.svg"/> Cronología</div>
+                        </a>
                      </li>
                      <li>
-                        <a href="Perfil.html"><div class="ContenedorItemMenuLateral"><img class="IconosMenuLateral" src="../../Public/Images/Icons/Perfil.svg"/> Perfil</div></a>
+                        <a href="Perfil.html">
+                           <div class="ContenedorItemMenuLateral"><img class="IconosMenuLateral" src="../../Public/Images/Icons/Perfil.svg"/> Perfil</div>
+                        </a>
                      </li>
                      <li>
-                        <a href="https://www.google.com" target="_blank"><div class="ContenedorItemMenuLateral"><img class="IconosMenuLateral" src="../../Public/Images/Icons/SitioWeb.svg"/> Visita el Sitio Web</div></a>
+                        <a href="https://www.google.com" target="_blank">
+                           <div class="ContenedorItemMenuLateral"><img class="IconosMenuLateral" src="../../Public/Images/Icons/SitioWeb.svg"/> Visita el Sitio Web</div>
+                        </a>
                      </li>
                      <li>
                         <a onclick="abrirMenuConfiguracion()">
@@ -84,8 +92,6 @@
             </div>
          </div>
          <!-- ----------------- FIN MENÚ LATERAL ----------------- -->
-
-
          <!-- ----------------- INICIO FRANJA SUPERIOR BUSCADOR ----------------- -->
          <!-- Seccion Menú y Logo -->
          <div class="SeccionHeaderFija" id="SeccionHeaderFija">
@@ -107,11 +113,8 @@
          </div>
          <div id="MedidaAlturaBarraFija"></div>
          <!-- ----------------- FIN FRANJA SUPERIOR BUSCADOR ----------------- -->
-
-
          <!-- ----------------- INICIO CONTENIDO PÁGINA ----------------- -->
          <div class="ContenidoPagina" id="ContenidoPagina">
-
             <!-- ----------------- INICIO CONTENIDO COLUMNA IZQUIERDA ----------------- -->
             <div class="ColumnaIzquierda">
                <!-- Contenido Texto Explicacion -->
@@ -133,10 +136,12 @@
                <h2>Búsquedas Recientes</h2>
                <div class="SeparadorSecciones"></div>
                <div class="SeccionBusquedasRecientes">
-                  <div class="ElementoBusquedaReciente">
-                     <div class="TextoBusquedaReciente">Regalías</div>
-                     <div class="IconobusquedaReciente"><img class="IconoAbrir" src="../../Public/Images/Icons/Abrir.svg"/></div>
-                  </div>
+                  <a href="Results.html">
+                     <div class="ElementoBusquedaReciente">
+                        <div class="TextoBusquedaReciente">Regalías</div>
+                        <div class="IconobusquedaReciente"><img class="IconoAbrir" src="../../Public/Images/Icons/Abrir.svg"/></div>
+                     </div>
+                  </a>
                   <hr>
                   <div class="ElementoBusquedaReciente">
                      <div class="TextoBusquedaReciente">Regalías</div>
@@ -148,41 +153,52 @@
                      <div class="IconobusquedaReciente"><img class="IconoAbrir" src="../../Public/Images/Icons/Abrir.svg"/></div>
                   </div>
                </div>
+               <!-- Contenido Todos Los Terminos -->
+               <div class="SeccionTodosLosTerminos">
+                  <div class="SeparadorSeccionPrincipal"></div>
+                  <h2>De la A a la Z</h2>
+                  <div class="SeparadorSecciones"></div>
+                  <p>Encuentra todos los términos disponibles en nuestro Diccionario Jurídico Minero-Energético ordenados de la A a la Z haciendo clic en el siguiente botón. Explora nuestros recursos completo ahora mismo.</p>
+                  <div class="SeparadorSecciones"></div>
+                  <div class="DiccionarioCompleto"><img class="IconoDiccionarioCompleto" src="../../Public/Images/Icons/Terminos.svg"/> <span>CONSULTA TODOS LOS TÉRMINOS</span> </div>
+               </div>
             </div>
             <!-- ----------------- FIN CONTENIDO COLUMNA IZQUIERDA ----------------- -->
-
-
             <!-- ----------------- INICIO CONTENIDO COLUMNA DERECHA ----------------- -->
-            <div class="ColumnaDerecha">
+            <div class="ColumnaDerechaDesaparece">
                <div class="SeccionPalabraDelDiaWidget">
                   <h2>Palabra del día</h2>
                   <div class="SeparadorSecciones"></div>
                   <div class="ContenidoPalabradelDia">
                      <div class="ContenedorPalabraIconoWidgetPalabraDelDia">
                         <h3>Regalías</h3>
-                        <img class="IconoAgregarFavorito" src="../../Public/Images/Icons/AgregarFavorito.svg"/>
+                        <img class="IconoAgregarFavoritoWidget" src="../../Public/Images/Icons/AgregarFavorito.svg"/>
                      </div>
                      <div class="SeparadorSecciones"></div>
                      <div class="ListadoDescripciones ScrollVerde" id="ListadoDescripcionesWidget">
                         <div class="ConceptoDefinicion">Regalías. Acto Legislativo 5 de 2011. Concepto.</div>
+                        <div class="CaracteristicasDefinicion"><span><i>2011</i></span> - <span><i>Jurisprudencia</i></span></div>
                         <div class="DefinicionPalabraDelDia">
                            Aqui va la definición. - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vulputate nisl pharetra, tincidunt enim eu, malesuada ante. Sed venenatis ante velit. Vestibulum faucibus urna efficitur lacus mattis, eget commodo odio facilisis. Vestibulum a nibh efficitur, rhoncus ex quis, molestie sapien. Nulla fermentum id erat sit amet iaculis. Fusce a ultrices odio. Etiam ac mi non purus varius tristique. Nulla in diam interdum, mollis purus id, ullamcorper metus. Duis euismod nunc quis sem hendrerit gravida. Nam commodo vulputate elementum.
                            Praesent aliquam nunc sit amet tempus vestibulum. Proin ornare rutrum mauris vel auctor. Integer venenatis arcu a ligula porta, et cursus purus vehicula. Nullam vitae lacinia risus. Suspendisse vitae quam sit amet ex aliquet maximus in ac eros. Nulla ornare, tortor sed pulvinar tristique, turpis ante ultrices turpis, in tincidunt dolor ipsum sagittis arcu.
                         </div>
                         <div class="SeparadorSecciones"></div>
                         <div class="ConceptoDefinicion">Regalías. Acto Legislativo 5 de 2011. Concepto.</div>
+                        <div class="CaracteristicasDefinicion"><span><i>2011</i></span> - <span><i>Jurisprudencia</i></span></div>
                         <div class="DefinicionPalabraDelDia">
                            Aqui va la definición. - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vulputate nisl pharetra, tincidunt enim eu, malesuada ante. Sed venenatis ante velit. Vestibulum faucibus urna efficitur lacus mattis, eget commodo odio facilisis. Vestibulum a nibh efficitur, rhoncus ex quis, molestie sapien. Nulla fermentum id erat sit amet iaculis. Fusce a ultrices odio. Etiam ac mi non purus varius tristique. Nulla in diam interdum, mollis purus id, ullamcorper metus. Duis euismod nunc quis sem hendrerit gravida. Nam commodo vulputate elementum.
                            Praesent aliquam nunc sit amet tempus vestibulum. Proin ornare rutrum mauris vel auctor. Integer venenatis arcu a ligula porta, et cursus purus vehicula. Nullam vitae lacinia risus. Suspendisse vitae quam sit amet ex aliquet maximus in ac eros. Nulla ornare, tortor sed pulvinar tristique, turpis ante ultrices turpis, in tincidunt dolor ipsum sagittis arcu.
                         </div>
                         <div class="SeparadorSecciones"></div>
                         <div class="ConceptoDefinicion">Regalías. Acto Legislativo 5 de 2011. Concepto.</div>
+                        <div class="CaracteristicasDefinicion"><span><i>2011</i></span> - <span><i>Jurisprudencia</i></span></div>
                         <div class="DefinicionPalabraDelDia">
                            Aqui va la definición. - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vulputate nisl pharetra, tincidunt enim eu, malesuada ante. Sed venenatis ante velit. Vestibulum faucibus urna efficitur lacus mattis, eget commodo odio facilisis. Vestibulum a nibh efficitur, rhoncus ex quis, molestie sapien. Nulla fermentum id erat sit amet iaculis. Fusce a ultrices odio. Etiam ac mi non purus varius tristique. Nulla in diam interdum, mollis purus id, ullamcorper metus. Duis euismod nunc quis sem hendrerit gravida. Nam commodo vulputate elementum.
                            Praesent aliquam nunc sit amet tempus vestibulum. Proin ornare rutrum mauris vel auctor. Integer venenatis arcu a ligula porta, et cursus purus vehicula. Nullam vitae lacinia risus. Suspendisse vitae quam sit amet ex aliquet maximus in ac eros. Nulla ornare, tortor sed pulvinar tristique, turpis ante ultrices turpis, in tincidunt dolor ipsum sagittis arcu.
                         </div>
                         <div class="SeparadorSecciones"></div>
                         <div class="ConceptoDefinicion"> Regalías. Acto Legislativo 5 de 2011. Concepto.</div>
+                        <div class="CaracteristicasDefinicion"><span><i>2011</i></span> - <span><i>Jurisprudencia</i></span></div>
                         <div class="DefinicionPalabraDelDia">
                            Aqui va la definición. - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vulputate nisl pharetra, tincidunt enim eu, malesuada ante. Sed venenatis ante velit. Vestibulum faucibus urna efficitur lacus mattis, eget commodo odio facilisis. Vestibulum a nibh efficitur, rhoncus ex quis, molestie sapien. Nulla fermentum id erat sit amet iaculis. Fusce a ultrices odio. Etiam ac mi non purus varius tristique. Nulla in diam interdum, mollis purus id, ullamcorper metus. Duis euismod nunc quis sem hendrerit gravida. Nam commodo vulputate elementum.
                            Praesent aliquam nunc sit amet tempus vestibulum. Proin ornare rutrum mauris vel auctor. Integer venenatis arcu a ligula porta, et cursus purus vehicula. Nullam vitae lacinia risus. Suspendisse vitae quam sit amet ex aliquet maximus in ac eros. Nulla ornare, tortor sed pulvinar tristique, turpis ante ultrices turpis, in tincidunt dolor ipsum sagittis arcu.
@@ -192,23 +208,24 @@
                </div>
             </div>
             <!-- ----------------- FIN CONTENIDO COLUMNA DERECHA ----------------- -->
-
-
             <!-- ----------------- INICIO SECCIÓN INFERIOR ATAJOS FIXED ----------------- -->
             <div id="AlturaAtajosAsignada"></div>
          </div>
          <!-- Seccion Atajos -->
          <div class="SeccionAtajos" id="AlturaMenuAtajos">
-            <div class="ElementoAtajo"><img class="IconoAtajos IconoAtajoActivo" src="../../Public/Images/Icons/Inicio.svg"/><br>Inicio</div>
-            <div class="ElementoAtajo"><img class="IconoAtajos" src="../../Public/Images/Icons/Favoritos.svg"/><br>Favoritos</div>
-            <div class="ElementoAtajo"><img class="IconoAtajos" src="../../Public/Images/Icons/Cronologia.svg"/><br>Cronología</div>
+            <a href="Home.html">
+               <div class="ElementoAtajo"><img class="IconoAtajos IconoAtajoActivo" src="../../Public/Images/Icons/Inicio.svg"/><br>Inicio</div>
+            </a>
+            <a href="Favorites.html">
+               <div class="ElementoAtajo"><img class="IconoAtajos" src="../../Public/Images/Icons/Favoritos.svg"/><br>Favoritos</div>
+            </a>
+            <a href="History.html">
+               <div class="ElementoAtajo"><img class="IconoAtajos" src="../../Public/Images/Icons/Cronologia.svg"/><br>Cronología</div>
+            </a>
          </div>
-
          <!-- ----------------- FIN SECCIÓN INFERIOR ATAJOS FIXED ----------------- -->
-
-     
          <!-- ----------------- IMPORT JS ----------------- -->
          <script src="../JS/JS.js"></script>
-</div>
-</body>
+      </div>
+   </body>
 </html>

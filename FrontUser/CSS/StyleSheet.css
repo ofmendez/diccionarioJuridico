@@ -17,6 +17,8 @@
      --RadioEsquinas: 15px;
      --PaddingElementos:4%;
      --PaddingAtajos: 3%;
+     --PaddingInstrucciones:6%;
+     --PaddingUnaColumna:5%;
     /*Menu Lateral*/
      --MenuAncho: 65vw;
      --MenuAnchoMaxWidth: auto;
@@ -39,7 +41,7 @@
      --ConfiguracionAnchoBotonesModo: 13vw;
      --ConfiguracionEspacioBajoTitulo: 4%;
     /*Fuentes*/
-     --TamanoFuenteTitulosH1: 40px;
+     --TamanoFuenteTitulosH1: 22px;
      --TamanoFuenteTitulosH2: 22px;
      --TamanoFuenteTitulosH3: 20px;
      --TamanoFuenteParrafos: 14px;
@@ -51,6 +53,7 @@
      --AlturaIconoAbrir: 16px;
      --AlturaIconoAgregarFavorito: 24px;
      --AlturaIconosAtajos:25px;
+     --AlturaIconoFavorito: 24px;
      --AlturaIconosConfiguracion: 22px;
      --AlturaIconoLupa: 26px;
      --AlturaIconoMenu: 26px;
@@ -62,6 +65,8 @@
      --SeparadorSeccionPrincipal: 3vh;
      --SeparadorSecciones: 2vh;
      --FiltroNegativo: none;
+     --FiltroNegativoInvertido: invert(1);
+     --WidthHR:97%;
     /*Buscador*/
      --BuscadorPaddingLupa:6%;
      --BuscadorDisplayBoton: none;
@@ -78,6 +83,8 @@
      --SeccionDerechaTamanoAutomatico: 1000px;
     /*Sección Palabra del Día*/
      --SeccionPalabraDelDiaAtajoDisplay: block;
+     /*Pagina Favoritos*/
+     --SeparadorFavoritos: 8px;
 }
 /* Configuración General */
  *{
@@ -100,11 +107,16 @@
  a{
      text-decoration: none;
 }
+a:visited, a:active{
+    color:var(--ColorTexto)
+}
+
  p{
      font-size: var(--TamanoFuenteParrafos);
      color: var(--ColorTexto);
      font-weight: var(--FuenteRegular);
      text-align: justify;
+     line-height: 1.2em;
 }
  h1{
      font-size: var(--TamanoFuenteTitulosH1);
@@ -115,16 +127,18 @@
      font-size: var(--TamanoFuenteTitulosH2) !important;
      font-weight: var(--FuenteNegrilla);
      color:var(--ColorTexto);
+     line-height: 1.1em;
 }
  h3{
      font-size: var(--TamanoFuenteTitulosH3) !important;
      font-weight: var(--FuenteNegrilla);
+     line-height: 1em;
 }
  ul{
      list-style: none;
 }
  hr{
-     width:97%;
+     width:var(--WidthHR);
      margin:0 auto;
      border: 1px solid var(--ColorPlaceholder);
 }
@@ -134,17 +148,17 @@
     /* width */
 }
  .ScrollVerde::-webkit-scrollbar-track {
-     background: var(--ColorAcentoHover);
+     background: var(--ColorFondosHover);
     /* Track */
      border-radius: var(--RadioEsquinas);
 }
  .ScrollVerde::-webkit-scrollbar-thumb {
-     background: var(--ColorFondos);
+     background: var(--ColorAcento);
     /* Handle */
      border-radius: var(--RadioEsquinas);
 }
  .ScrollVerde::-webkit-scrollbar-thumb:hover {
-     background: var(--ColorFondosHover);
+     background: var(--ColorAcentoHover);
     /* Handle on hover */
 }
  .TextoColorAcento{
@@ -169,6 +183,38 @@
  .ContenedorAplicativo{
      background-color: var(--ColorFondos);
 }
+
+/* ----------------- CONFIGURACIÓN PÁGINA CONTENIDO -----------------*/
+
+/* Configuración Contenedor Página */
+.ContenidoPagina{
+    padding: calc(var(--MargenesContenido)/2) var(--MargenesContenido) var(--MargenesContenido) var(--MargenesContenido);
+    width: var(--SeccionesDerechaAncho);
+    margin-left: var(--SeccionesDerechaMenuAncho);
+}
+
+.ContenedorDefiniciones{
+    background-color: var(--ColorSecundario);
+    border-radius: var(--RadioEsquinas);
+    padding: var(--PaddingUnaColumna)
+}
+
+.ContenidoUnaColumna{
+    width: 100%;
+}
+
+.ColumnaDerechaDesaparece{
+    display: none;
+}
+
+.InstruccionesDerecha{
+   background-color: var(--ColorSecundario);
+   color: var(--ColorTexto);
+   font-size: var(--TamanoFuenteParrafos);
+   padding: var(--PaddingInstrucciones);
+   border-radius: var(--RadioEsquinas);
+}
+
 /* ----------------- CONFIGURACIÓN LOGIN -----------------*/
 /* Configuración Sección Login */
  .SeccionLogin{
@@ -368,6 +414,9 @@
  .ModoActivo{
      background-color: var(--ColorAcento);
 }
+.ModoActivo img{
+    filter: invert(1) !important;
+}
  .ModoActivo:hover{
      background-color: var(--ColorAcento);
 }
@@ -422,6 +471,42 @@
      transition: visibility 1s, opacity 0.5s, z-index 0.5s linear;
      z-index:-1 !important;
 }
+/* ----------------- CONFIGURACIÓN SECCIÓN ATAJOS -----------------*/
+/* Configuración Sección Atajos */
+.SeccionAtajos{
+    background-color: var(--ColorAcento);
+    display: var(--OcultarElemento);
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    color: var(--ColorTextoAcento);
+    position: fixed;
+    bottom: 0;
+    padding: var(--PaddingAtajos);
+    left:0;
+    right:0;
+    z-index:10;
+    text-align: center;
+    font-size: var(--TamanoFuenteParrafos);
+}
+.SeccionAtajos a{
+    color: var(--ColorTextoAcento);
+    text-align: center;
+    width: 33.33%;
+}
+.ElementoAtajo{
+    line-height: 1em;
+}
+.IconoAtajos {
+    height:var(--AlturaIconosAtajos);
+    opacity: 0.5;
+    filter: brightness(100);
+}
+.IconoAtajoActivo {
+    opacity: 1;
+}
+
+
 /* ----------------- CONFIGURACIÓN HOME -----------------*/
 /* Configuración Header */
  .SeccionHeaderFija{
@@ -448,6 +533,10 @@
      height:var(--AlturaIconoMenu);
      filter: var(--FiltroNegativo);
      display: var(--MenuOcultarHamburguesa);
+}
+.IconoVolver{
+    height:var(--AlturaIconoMenu);
+    filter: var(--FiltroNegativo);
 }
  .SeccionHeaderDerecha{
      order:2;
@@ -488,20 +577,13 @@
      width: var(--BuscadorSubmitWidth);
      margin-left: var(--BuscadorSeparaciónSubmit);
      font-weight: var(--FuenteNegrilla);
+     font-size: var(--TamanoFuenteParrafos);
      cursor: pointer;
 }
  .SubmitBusqueda:hover{
      background-color: var(--ColorAcentoHover);
 }
-/* Configuración ContenedorPágina */
- .ContenidoPagina{
-     padding: calc(var(--MargenesContenido)/2) var(--MargenesContenido) var(--MargenesContenido) var(--MargenesContenido);
-     width: var(--SeccionesDerechaAncho);
-     margin-left: var(--SeccionesDerechaMenuAncho);
-}
- .ColumnaDerecha{
-     display: none;
-}
+
 /* Configuración Palabra del Dia Atajo */
  .SeccionPalabraDelDiaAtajo{
      display: var(--SeccionPalabraDelDiaAtajoDisplay);
@@ -533,10 +615,10 @@
 }
 /*Configuración Palabra del día Widget */
  .ContenidoPalabradelDia{
-     background-color: var(--ColorAcento);
-     color: var(--ColorTextoAcento);
+     background-color: var(--ColorSecundario);
+     color: var(--ColorTexto);
      font-size: var(--TamanoFuenteParrafos);
-     padding: calc(var(--PaddingElementos)*2);
+     padding: calc(var(--PaddingElementos)*4);
      border-radius: var(--RadioEsquinas);
 }
  .ContenedorPalabraIconoWidgetPalabraDelDia{
@@ -544,9 +626,17 @@
      align-items: center;
      justify-content: space-between;
 }
+
+.IconoAgregarFavoritoWidget{
+    height:var(--AlturaIconoAgregarFavorito);
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.5s;
+    filter: var(--FiltroNegativoInvertido);
+}
  .ListadoDescripciones{
      overflow-y: auto;
-     padding: 0 calc(var(--MargenesContenido)/2) calc(var(--MargenesContenido)/2) calc(var(--MargenesContenido)/2);
+    padding-right: calc(var(--PaddingElementos)*3);
      min-height: 300px;
 }
  .ConceptoDefinicion{
@@ -579,33 +669,90 @@
  .TextoBusquedaReciente{
      font-size: var(--TamanoFuenteParrafos);
 }
-/* Configuración Sección Atajos */
- .SeccionAtajos{
-     background-color: var(--ColorAcento);
-     display: var(--OcultarElemento);
-     flex-direction: row;
-     flex-wrap: nowrap;
-     justify-content: space-around;
-     color: var(--ColorTextoAcento);
-     position: fixed;
-     bottom: 0;
-     padding: var(--PaddingAtajos);
-     left:0;
-     right:0;
-     z-index:10;
-     text-align: center;
-     font-size: var(--TamanoFuenteParrafos);
+
+/* Configuración Todos los Términos */
+.DiccionarioCompleto{
+        background-color: var(--ColorAcento);
+        color: var(--ColorTextoAcento);
+        font-size: var(--TamanoFuenteParrafos);
+        padding: var(--PaddingElementos);
+        border-radius: var(--RadioEsquinas);
+        justify-content: center;
+        display:flex;
+        align-items: center;
+        cursor: pointer;
+        text-align: center;
+   }
+    .DiccionarioCompleto:hover{
+        background-color: var(--ColorAcentoHover);
+   }
+   .IconoDiccionarioCompleto{
+    height:var(--AlturaIconoLupa);
+    padding-right: var(--PaddingBusquedasRecientes);
 }
- .ElementoAtajo{
-     width:33.33%;
-     line-height: 1em;
-}
- .IconoAtajos {
-     height:var(--AlturaIconosAtajos);
-     opacity: 0.5;
-     filter: brightness(100);
-}
- .IconoAtajoActivo {
-     opacity: 1;
-}
+
+
  
+
+/* ----------------- CONFIGURACIÓN FAVORITOS -----------------*/
+/* Configuración Término Favorito */
+
+.ContenedorTerminoFavorito{
+    background-color: var(--ColorSecundario);
+    color: var(--ColorTexto);
+    border-radius: var(--RadioEsquinas);
+    padding: calc(var(--PaddingElementos)*.5) var(--PaddingElementos);
+}
+
+.TerminoFavorito{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: var(--PaddingBusquedasRecientes);
+    cursor: pointer;
+    align-items: center;
+}
+.TerminoFavorito:hover{
+    text-decoration: underline;
+}
+
+.ContenedorFavoritoIcono{
+    display:flex;
+    align-items: center;
+}
+.IconoFavorito{
+    height:var(--AlturaIconoFavorito);
+    padding-right: calc(var(--BuscadorPaddingLupa)*5);
+}
+
+.SeparadorFavoritos{
+    height: var(--SeparadorFavoritos);
+}
+/* ----------------- CONFIGURACIÓN TÉRMINOS GENERAL -----------------*/
+
+.CaracteristicaDefinicion{
+    font-weight: var(--FuenteNegrilla);
+    line-height: 1em;
+    margin-bottom: var(--PaddingElementos);
+}
+
+/* ----------------- CONFIGURACIÓN RESULTADOS -----------------*/
+.ElementoResultado{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    cursor: pointer;
+    align-items: center;
+}
+/* ----------------- CONFIGURACIÓN TÉRMINO -----------------*/
+.ContenedorTermino{
+    cursor: pointer !important;
+} 
+
+/* ----------------- CONFIGURACIÓN DEFINICIÓN  -----------------*/
+.TituloDefinicionIcono{
+display: flex;
+justify-content: space-between;
+}

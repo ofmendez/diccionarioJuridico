@@ -8,6 +8,8 @@
         /*Estilos*/
          --MargenesContenido:30px;
          --PaddingElementos:1%;
+         --PaddingInstrucciones:4%;
+         --PaddingUnaColumna:20px;
         /*Menu Lateral*/
          --MenuAncho: 22vw;
          --MenuAnchoMaxWidth: 280px;
@@ -20,6 +22,7 @@
          --ConfiguracionPaddingContenedor:30px;
          --ConfiguracionAnchoBotonesTamañoLetra: 130px;
          --ConfiguracionAnchoBotonesModo: 60px;
+
         /*Búsquedas Recientes*/
          --PaddingBusquedasRecientes:10px;
         /*Sección Derecha*/
@@ -41,7 +44,12 @@
          width:50%;
          padding-right: calc(var(--MargenesContenido)/2);
     }
-     .ColumnaDerecha{
+
+    .DiccionarioCompleto{
+        padding: calc(var(--PaddingElementos)*2);
+    }
+    
+     .ColumnaDerechaDesaparece, .ColumnaDerecha{
          display: block;
          width:50%;
          padding-left: calc(var(--MargenesContenido)/2);
