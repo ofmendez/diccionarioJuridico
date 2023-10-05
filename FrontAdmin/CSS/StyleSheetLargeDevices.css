@@ -3,6 +3,8 @@
         background-color: transparent;
    }
     :root {
+       /* Estilos */
+        --PaddingElementos:4%;
        /*Menu Lateral*/
         --MenuAncho: 26vw;
         --MenuSeparacionElementos: 5%;
@@ -13,6 +15,8 @@
         --TamanoFuenteTitulosH1: 22px;
         --TamanoFuenteTitulosH2: 22px;
         --TamanoFuenteParrafos: 14px;
+       /* Página Home */
+        --OcultarHeaderMovil: none;
    }
    /* Animaciones Menú */
     .slide-in {

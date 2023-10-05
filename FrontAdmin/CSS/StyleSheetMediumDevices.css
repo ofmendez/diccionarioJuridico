@@ -1,7 +1,5 @@
 @media only screen and (min-width: 768px) {
-   /* *{
-        background-color: #ffff0033; 
-   }*/
+
     :root {
        /*Menu Lateral*/
         --MenuAncho: 34vw;
@@ -10,7 +8,9 @@
         --MenuSeparacionElementos: 6%;
        /*Fuentes*/
         --TamanoFuenteParrafos: 14px;
-        /*Iconos*/
+       /*Iconos*/
         --AlturaIconosMenuLateral:25px;
+       /* Modulo Estadísticas */
+        --SeccionEstadisticasDisplay:flex;
    }
 }

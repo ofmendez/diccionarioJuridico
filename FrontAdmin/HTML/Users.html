@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Administrador Diccionario Jurídico Minero-Energético</title>
+      <link rel="stylesheet" href="../CSS/StyleSheet.css">
+      <link rel="stylesheet" href="../CSS/StyleSheetExtraSmallDevices.css">
+      <link rel="stylesheet" href="../CSS/StyleSheetSmallDevices.css">
+      <link rel="stylesheet" href="../CSS/StyleSheetMediumDevices.css">
+      <link rel="stylesheet" href="../CSS/StyleSheetLargeDevices.css">
+      <link rel="stylesheet" href="../CSS/StyleSheetExtraLargeDevices.css">
+      <link rel="icon" type="image/x-icon" href="../../Public/Images/Favicon.png">
+      <meta name="view-transition" content="same-origin" />
+   </head>
+   <body>
+      <div class="ContenedorAplicativo">
+         <!-- ----------------- INICIO MENÚ LATERAL ----------------- -->
+         <!-- Menu Vertical -->
+         <div id="ContenedorMenuLateral">
+            <div class="MenuLateral" id="MenuLateral">
+               <div class="MenuLateralSeccion">
+                  <img class="LogoMenuLateral" src="../../Public/Images/LogoBlanco.svg"/>
+                  <ul class="MenuLateralLista">
+                     <li>
+                        <a href="Home.html">
+                           <div class="ContenedorItemMenuLateral"><img class="IconosMenuLateral" src="../../Public/Images/Icons/Inicio.svg"/> Inicio</div>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="Users.html">
+                           <div class="ContenedorItemMenuLateral ItemMenuActivo"><img class="IconosMenuLateral" src="../../Public/Images/Icons/Perfil.svg"/> Usuarios</div>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="Términos.html">
+                           <div class="ContenedorItemMenuLateral"><img class="IconosMenuLateral" src="../../Public/Images/Icons/Palabras.svg"/> Términos</div>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="MenuLateralSeccion InformacionPropiedadAplicativo">
+                  © 2023 Explore Diccionario
+                  Jurídico Minero-Energético.
+               </div>
+            </div>
+         </div>
+         <!-- Overlay -->
+         <div class="OverlayMenu" id="OverlayMenu" onclick="cerrarMenuLateral()" style="visibility:hidden;"></div>
+         <!-- ----------------- FIN MENÚ LATERAL ----------------- -->
+         <!-- ----------------- INICIO CONTENIDO PÁGINA ----------------- -->
+         <div class="ContenidoPagina" id="ContenidoPagina">
+            <!-- ----------------- INICIO BARRA SUPERIOR MOVIL ----------------- -->
+            <div class="SeccionBarraSuperiorMovil">
+               <div class="SeccionHeader">
+                  <div class="SeccionHeaderIzquierda"><a onclick="abrirMenuLateral()"><img class="IconoMenu" src="../../Public/Images/Icons/Menu.svg"/></a></div>
+                  <div class="SeccionHeaderDerecha"><img class="LogoPrincipal" src="../../Public/Images/LogoPositivo.svg"/></div>
+               </div>
+               <div class="SeparadorSeccionPrincipal"></div>
+            </div>
+            <!-- ----------------- FIN BARRA SUPERIOR MOVIL ----------------- -->
+            <!-- ----------------- INICIO MENSAJE SUPERIOR Y ESTADÍSTICAS ----------------- -->
+            <div class="SeccionMensajeEstadisticas" id="SeccionMensajeEstadisticas">
+               <form>
+                  <input type="search" id="user-search" name="search" />
+                  <button>Search</button>
+               </form>
+            </div>
+            <!-- ----------------- FIN MENSAJE SUPERIOR ----------------- -->
+            <!-- ----------------- INICIO CONTENIDO HOME ----------------- -->
+            <div class="SeccionContenidoHome" id="SeccionContenidoHome">
+               <div class="SeccionContenidoSubpagina">
+                  <h3>Usuarios</h3>
+                  <div class="SeparadorSeccionPrincipal"></div>
+                  <div class="ContenedorTablaRecientes ScrollVerde">
+                     <table class="TablaRecientes">
+                        <tr class="TablaSeparadorTitulos">
+                           <th style="width:30%;">Usuario</th>
+                           <th style="width:20%;">Rol</th>
+                           <th style="width:20%;">Ult. ingreso</th>
+                           <th style="width:20%;">Estado</th>
+                           <th style="width:10%;" class="TablaTextoCentrado">Acción</th>
+                        </tr>
+                        <tr>
+                           <td>Nombre Ejemplo</td>
+                           <td>Admin</td>
+                           <td>19/05/2023</td>
+                           <td>Activo</td>
+                           <td class="TablaTextoCentrado"><img class="IconosTabla" src="../../Public/Images/Icons/Ver.svg"/> <img class="IconosTabla" src="../../Public/Images/Icons/Editar.svg"/></td>
+                        </tr>
+                        <tr>
+                           <td>Nombre Ejemplo</td>
+                           <td>Admin</td>
+                           <td>19/05/2023</td>
+                           <td>Activo</td>
+                           <td class="TablaTextoCentrado"><img class="IconosTabla" src="../../Public/Images/Icons/Ver.svg"/> <img class="IconosTabla" src="../../Public/Images/Icons/Editar.svg"/></td>
+                        </tr>
+                        <tr>
+                           <td>Nombre Ejemplo</td>
+                           <td>Admin</td>
+                           <td>19/05/2023</td>
+                           <td>Activo</td>
+                           <td class="TablaTextoCentrado"><img class="IconosTabla" src="../../Public/Images/Icons/Ver.svg"/> <img class="IconosTabla" src="../../Public/Images/Icons/Editar.svg"/></td>
+                        </tr>
+                        <tr>
+                           <td>Nombre Ejemplo</td>
+                           <td>Admin</td>
+                           <td>19/05/2023</td>
+                           <td>Activo</td>
+                           <td class="TablaTextoCentrado"><img class="IconosTabla" src="../../Public/Images/Icons/Ver.svg"/> <img class="IconosTabla" src="../../Public/Images/Icons/Editar.svg"/></td>
+                        </tr>
+                        <tr>
+                           <td>Nombre Ejemplo</td>
+                           <td>Admin</td>
+                           <td>19/05/2023</td>
+                           <td>Activo</td>
+                           <td class="TablaTextoCentrado"><img class="IconosTabla" src="../../Public/Images/Icons/Ver.svg"/> <img class="IconosTabla" src="../../Public/Images/Icons/Editar.svg"/></td>
+                        </tr>
+                        <tr>
+                           <td>Nombre Ejemplo</td>
+                           <td>Admin</td>
+                           <td>19/05/2023</td>
+                           <td>Activo</td>
+                           <td class="TablaTextoCentrado"><img class="IconosTabla" src="../../Public/Images/Icons/Ver.svg"/> <img class="IconosTabla" src="../../Public/Images/Icons/Editar.svg"/></td>
+                        </tr>
+                        <tr>
+                           <td>Nombre Ejemplo</td>
+                           <td>Admin</td>
+                           <td>19/05/2023</td>
+                           <td>Activo</td>
+                           <td class="TablaTextoCentrado"><img class="IconosTabla" src="../../Public/Images/Icons/Ver.svg"/> <img class="IconosTabla" src="../../Public/Images/Icons/Editar.svg"/></td>
+                        </tr>
+                        <tr>
+                           <td>Nombre Ejemplo</td>
+                           <td>Admin</td>
+                           <td>19/05/2023</td>
+                           <td>Activo</td>
+                           <td class="TablaTextoCentrado"><img class="IconosTabla" src="../../Public/Images/Icons/Ver.svg"/> <img class="IconosTabla" src="../../Public/Images/Icons/Editar.svg"/></td>
+                        </tr>
+                        <tr>
+                           <td>Nombre Ejemplo</td>
+                           <td>Admin</td>
+                           <td>19/05/2023</td>
+                           <td>Activo</td>
+                           <td class="TablaTextoCentrado"><img class="IconosTabla" src="../../Public/Images/Icons/Ver.svg"/> <img class="IconosTabla" src="../../Public/Images/Icons/Editar.svg"/></td>
+                        </tr>
+                        <tr>
+                           <td>Nombre Ejemplo</td>
+                           <td>Admin</td>
+                           <td>19/05/2023</td>
+                           <td>Activo</td>
+                           <td class="TablaTextoCentrado"><img class="IconosTabla" src="../../Public/Images/Icons/Ver.svg"/> <img class="IconosTabla" src="../../Public/Images/Icons/Editar.svg"/></td>
+                        </tr>
+                        <tr>
+                           <td>Nombre Ejemplo</td>
+                           <td>Admin</td>
+                           <td>19/05/2023</td>
+                           <td>Activo</td>
+                           <td class="TablaTextoCentrado"><img class="IconosTabla" src="../../Public/Images/Icons/Ver.svg"/> <img class="IconosTabla" src="../../Public/Images/Icons/Editar.svg"/></td>
+                        </tr>
+                        <tr>
+                           <td>Nombre Ejemplo</td>
+                           <td>Admin</td>
+                           <td>19/05/2023</td>
+                           <td>Activo</td>
+                           <td class="TablaTextoCentrado"><img class="IconosTabla" src="../../Public/Images/Icons/Ver.svg"/> <img class="IconosTabla" src="../../Public/Images/Icons/Editar.svg"/></td>
+                        </tr>
+                        <tr>
+                           <td>Nombre Ejemplo</td>
+                           <td>Admin</td>
+                           <td>19/05/2023</td>
+                           <td>Activo</td>
+                           <td class="TablaTextoCentrado"><img class="IconosTabla" src="../../Public/Images/Icons/Ver.svg"/> <img class="IconosTabla" src="../../Public/Images/Icons/Editar.svg"/></td>
+                        </tr>
+                        <tr>
+                           <td>Nombre Ejemplo</td>
+                           <td>Admin</td>
+                           <td>19/05/2023</td>
+                           <td>Activo</td>
+                           <td class="TablaTextoCentrado"><img class="IconosTabla" src="../../Public/Images/Icons/Ver.svg"/> <img class="IconosTabla" src="../../Public/Images/Icons/Editar.svg"/></td>
+                        </tr>
+                        <tr>
+                           <td>Nombre Ejemplo</td>
+                           <td>Admin</td>
+                           <td>19/05/2023</td>
+                           <td>Activo</td>
+                           <td class="TablaTextoCentrado"><img class="IconosTabla" src="../../Public/Images/Icons/Ver.svg"/> <img class="IconosTabla" src="../../Public/Images/Icons/Editar.svg"/></td>
+                        </tr>
+                        <tr>
+                           <td>Nombre Ejemplo</td>
+                           <td>Admin</td>
+                           <td>19/05/2023</td>
+                           <td>Activo</td>
+                           <td class="TablaTextoCentrado"><img class="IconosTabla" src="../../Public/Images/Icons/Ver.svg"/> <img class="IconosTabla" src="../../Public/Images/Icons/Editar.svg"/></td>
+                        </tr>
+                        <tr>
+                           <td>Nombre Ejemplo</td>
+                           <td>Admin</td>
+                           <td>19/05/2023</td>
+                           <td>Activo</td>
+                           <td class="TablaTextoCentrado"><img class="IconosTabla" src="../../Public/Images/Icons/Ver.svg"/> <img class="IconosTabla" src="../../Public/Images/Icons/Editar.svg"/></td>
+                        </tr>
+                        <tr>
+                           <td>Nombre Ejemplo</td>
+                           <td>Admin</td>
+                           <td>19/05/2023</td>
+                           <td>Activo</td>
+                           <td class="TablaTextoCentrado"><img class="IconosTabla" src="../../Public/Images/Icons/Ver.svg"/> <img class="IconosTabla" src="../../Public/Images/Icons/Editar.svg"/></td>
+                        </tr>
+                        <tr>
+                           <td>Nombre Ejemplo</td>
+                           <td>Admin</td>
+                           <td>19/05/2023</td>
+                           <td>Activo</td>
+                           <td class="TablaTextoCentrado"><img class="IconosTabla" src="../../Public/Images/Icons/Ver.svg"/> <img class="IconosTabla" src="../../Public/Images/Icons/Editar.svg"/></td>
+                        </tr>
+                        <tr>
+                           <td>Nombre Ejemplo</td>
+                           <td>Admin</td>
+                           <td>19/05/2023</td>
+                           <td>Activo</td>
+                           <td class="TablaTextoCentrado"><img class="IconosTabla" src="../../Public/Images/Icons/Ver.svg"/> <img class="IconosTabla" src="../../Public/Images/Icons/Editar.svg"/></td>
+                        </tr>
+                        <tr>
+                           <td>Nombre Ejemplo</td>
+                           <td>Admin</td>
+                           <td>19/05/2023</td>
+                           <td>Activo</td>
+                           <td class="TablaTextoCentrado"><img class="IconosTabla" src="../../Public/Images/Icons/Ver.svg"/> <img class="IconosTabla" src="../../Public/Images/Icons/Editar.svg"/></td>
+                        </tr>
+                        <tr>
+                           <td>Nombre Ejemplo</td>
+                           <td>Admin</td>
+                           <td>19/05/2023</td>
+                           <td>Activo</td>
+                           <td class="TablaTextoCentrado"><img class="IconosTabla" src="../../Public/Images/Icons/Ver.svg"/> <img class="IconosTabla" src="../../Public/Images/Icons/Editar.svg"/></td>
+                        </tr>
+                        <tr>
+                           <td>Nombre Ejemplo</td>
+                           <td>Admin</td>
+                           <td>19/05/2023</td>
+                           <td>Activo</td>
+                           <td class="TablaTextoCentrado"><img class="IconosTabla" src="../../Public/Images/Icons/Ver.svg"/> <img class="IconosTabla" src="../../Public/Images/Icons/Editar.svg"/></td>
+                        </tr>
+                        <tr>
+                           <td>Nombre Ejemplo</td>
+                           <td>Admin</td>
+                           <td>19/05/2023</td>
+                           <td>Activo</td>
+                           <td class="TablaTextoCentrado"><img class="IconosTabla" src="../../Public/Images/Icons/Ver.svg"/> <img class="IconosTabla" src="../../Public/Images/Icons/Editar.svg"/></td>
+                        </tr>
+                        <tr>
+                           <td>Nombre Ejemplo</td>
+                           <td>Admin</td>
+                           <td>19/05/2023</td>
+                           <td>Activo</td>
+                           <td class="TablaTextoCentrado"><img class="IconosTabla" src="../../Public/Images/Icons/Ver.svg"/> <img class="IconosTabla" src="../../Public/Images/Icons/Editar.svg"/></td>
+                        </tr>
+                     </table>
+                  </div>
+               </div>
+            </div>
+            <!-- ----------------- FIN CONTENIDO HOME ----------------- -->
+         </div>
+      </div>
+      </div>
+      <!-- ----------------- IMPORT JS ----------------- -->
+      <script src="../JS/JS.js"></script>
+   </body>
+</html>

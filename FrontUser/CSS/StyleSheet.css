@@ -539,6 +539,7 @@ a:visited, a:active{
      height:var(--AlturaIconoMenu);
      filter: var(--FiltroNegativo);
      display: var(--MenuOcultarHamburguesa);
+     cursor: pointer;
 }
 .IconoVolver{
     height:var(--AlturaIconoMenu);
