@@ -17,6 +17,8 @@
         --TamanoFuenteParrafos: 14px;
        /* Página Home */
         --OcultarHeaderMovil: none;
+         /*Buscador*/
+         --BuscadorDisplayBoton: block;
    }
    /* Animaciones Menú */
     .slide-in {

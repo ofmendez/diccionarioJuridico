@@ -50,13 +50,26 @@
     /* Página Home */
      --OcultarHeaderMovil: block;
      --AlturaImagenMiniaturaPerfil: 50px;
-     --PaddingContenidosHome: 32px;
+     --PaddingContenidosHome: 20px;
     /* Modulo Estadísticas */
      --SeccionEstadisticasDisplay:none;
      --ModuloLargeScreen: none;
     /* Seccion Izquierda y Derecha */
      --SeccionIzquierdaWidth: 100%;
      --SeccionDerechaDisplay: none;
+    /* Subpaginas */
+     --PaddingBotonAgregar: 12px;
+     --SeccionSuperiorOrden: column;
+     --SeccionSuperiorAlineacion: stretch;
+     --FiltrosBusquedaOscultar: none;
+    /*Buscador*/
+     --AlturaIconoLupa: 26px;
+     --BuscadorPaddingLupa:6%;
+     --BuscadorDisplayBoton: none;
+     --BuscadorSeparacionSubmit:10px;
+     --BuscadorInputWidth: 100%;
+    /* Editar Terminos */
+     --AlturaIconoAgregarDefinicion: 25px;
 }
 /* Configuración General */
  *{
@@ -549,7 +562,7 @@
  .TablaRecientes tr{
      height: 36px;
 }
- .TablaRecientes tr:first-child, .TablaRecientes tr:nth-child(2), .TablaRecientes tr:nth-child(3), .TablaRecientes tr:nth-child(4), .TablaRecientes td:first-child, .TablaRecientes td:nth-child(2), .TablaRecientes td:nth-child(3), .TablaRecientes td:nth-child(4){
+ .TablaRecientes tr:first-child, .TablaRecientes tr:nth-child(2), .TablaRecientes tr:nth-child(3), .TablaRecientes td:first-child, .TablaRecientes td:nth-child(2), .TablaRecientes td:nth-child(3){
      padding-right: 20px;
 }
  .TablaSeparadorTitulos th{
@@ -589,4 +602,219 @@
      flex-direction: column;
      height: -webkit-fill-available;
      min-height: 0;
+}
+ .SeccionSuperiorHerramientas{
+     display:flex;
+     justify-content: space-between;
+     align-items: var(--SeccionSuperiorAlineacion);
+     flex-direction: var(--SeccionSuperiorOrden);
+     row-gap: 10px;
+     column-gap: 16px;
+}
+ .FiltrosBusqueda{
+     background-color: var(--ColorSecundario);
+     font-size: var(--TamanoFuenteParrafos);
+     border-radius: var(--RadioEsquinas);
+     padding: var(--PaddingBotonAgregar);
+     border: 0 solid transparent;
+     display: var(--FiltrosBusquedaOscultar);
+}
+ .SeccionDerechaBotones{
+     display:flex;
+     flex-direction: row;
+     column-gap: 16px;
+}
+ .BotonAgregar{
+     background-color: var(--ColorAcento);
+     border-radius: var(--RadioEsquinas);
+     color:var(--ColorSecundario);
+     padding: var(--MarginElementos);
+     font-size: var(--TamanoFuenteParrafos);
+     justify-content: center;
+     column-gap: 10px;
+     display: flex;
+     align-items: center;
+     min-width:200px;
+     padding: var(--PaddingBotonAgregar);
+     cursor: pointer;
+}
+ .BotonAgregar:hover, .BotonEliminar:hover{
+     background-color: var(--ColorAcentoHover);
+}
+ .BotonAgregar img, .BotonEliminar img{
+     filter: brightness(100);
+}
+ .BotonEliminar{
+     background-color: var(--ColorAcento);
+     border-radius: calc(var(--RadioEsquinas)*5);
+     color:var(--ColorSecundario);
+     padding: var(--MarginElementos);
+     font-size: var(--TamanoFuenteParrafos);
+     justify-content: center;
+     column-gap: 10px;
+     display: flex;
+     align-items: center;
+     padding: var(--PaddingBotonAgregar);
+     cursor: pointer;
+}
+/* Usuarios */
+/* Configuración Buscador */
+ .FormaBuscador{
+     display: flex;
+     flex-direction: row;
+     flex-wrap: nowrap;
+     justify-content: space-between;
+}
+ .SeccionInputBuscador{
+     display: flex;
+     flex-direction: row;
+     background-color: var(--ColorSecundario);
+     padding: var(--PaddingBotonAgregar);
+     border-radius: var(--RadioEsquinas);
+     width: var(--BuscadorInputWidth);
+}
+ .IconoLupa{
+     height:var(--AlturaIconoLupa);
+}
+ .InputBuscador{
+     flex-grow: 2;
+     border:0 solid transparent;
+     outline:0;
+     background-color: transparent;
+     padding-left: var(--BuscadorPaddingLupa);
+     font-size: var(--TamanoFuenteParrafos);
+     margin-right: 20px;
+}
+ .SubmitBusqueda{
+     border: 0 solid transparent;
+     padding: var(--PaddingBotonAgregar);
+     display: var(--BuscadorDisplayBoton);
+     background-color: var(--ColorAcento);
+     color: var(--ColorTextoAcento);
+     border-radius: var(--RadioEsquinas);
+     width: var(--BuscadorSubmitWidth);
+     margin-left: var(--BuscadorSeparacionSubmit);
+     font-weight: var(--FuenteNegrilla);
+     font-size: var(--TamanoFuenteParrafos);
+     cursor: pointer;
+     min-width: 120px;
+}
+ .SubmitBusqueda:hover{
+     background-color: var(--ColorAcentoHover);
+}
+ .ContenedorTablaUsuarios{
+     overflow-y: auto;
+     padding-right:20px;
+     max-height: 80svh;
+}
+ .TablaUsuarios{
+     width:100%;
+     text-align: left;
+     font-size: var(--TamanoFuenteParrafos);
+     color: var(--ColorTexto);
+     font-weight: var(--FuenteRegular);
+     line-height: 1.2em;
+     border-collapse: collapse;
+     border-spacing: 5px;
+}
+ .TablaUsuarios tr{
+     height: 36px;
+}
+ .TablaUsuarios th:first-child, .TablaUsuarios th:nth-child(2), .TablaUsuarios th:nth-child(3), .TablaUsuarios th:nth-child(4), .TablaUsuarios td:first-child, .TablaUsuarios td:nth-child(2), .TablaUsuarios td:nth-child(3), .TablaUsuarios td:nth-child(4){
+     padding-right: 20px;
+}
+/* Terminos Definiciones */
+ .SeccionContenidoDefiniciones{
+     display: flex;
+     flex-direction: column;
+     padding-top: 30px;
+     row-gap: 20px;
+}
+ .ContenidoDefinicion{
+     background-color: var(--ColorSecundario);
+     border-radius: var(--RadioEsquinas);
+     width:100%;
+     padding: var(--PaddingContenidosHome);
+}
+ .ContenidoDefinicion p{
+     user-select: text !important;
+     -moz-user-select: text !important;
+     -khtml-user-select: text !important;
+     -webkit-user-select: text !important;
+     -o-user-select: text !important;
+}
+ .InformacionDefinicion{
+     font-weight: var(--FuenteNegrilla);
+}
+ .ContenedorSuperiorDefinicion{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     flex-direction: row;
+}
+ .BotonEliminarSubtermino{
+     background-color: var(--ColorFondos);
+     border-radius: calc(var(--RadioEsquinas)*5);
+     color:var(--ColorTexto);
+     padding: 10px;
+     justify-content: center;
+     cursor: pointer;
+     display: flex;
+}
+ .BotonEliminarSubtermino:hover{
+     background-color: var(--ColorFondosHover);
+}
+ .BotonEliminarSubtermino img{
+     filter: brightness(0);
+     height: 20px;
+}
+ .DefinicionTermino{
+     max-height: 200px;
+     overflow-y: auto;
+     padding-right: 16px;
+}
+/* Editar Terminos */
+ .SeccionInputTitulo{
+     width:100%;
+}
+ .InputTermino{
+     background-color: var(--ColorSecundario);
+     border-radius: var(--RadioEsquinas);
+     font-size: var(--TamanoFuenteTitulosH1);
+     border: 0 solid transparent;
+     padding: 10px;
+     width:100%;
+}
+ .FormaEditarTerminos{
+     width:100%;
+}
+ .SeccionDescriptorEliminar{
+     display: flex;
+     flex-direction: row;
+     column-gap: 16px;
+     align-items: center;
+}
+ .FormaEditarTerminos input, .FormaEditarTerminos textarea, .FormaEditarTerminos select{
+     width:100%;
+     background-color: var(--ColorFondos);
+     border-radius: var(--RadioEsquinas);
+     font-size: var(--TamanoFuenteParrafos);
+     border: 0 solid transparent;
+     padding: 10px;
+}
+ .FormaEditarTerminos input:focus{
+     border: 2px solid var(--ColorAcento) !important;
+}
+ .InputDefinicion{
+     height:200px;
+}
+ .AgregarDefinicion{
+     padding: calc(var(--PaddingContenidosHome)/2);
+     display: flex;
+     justify-content: center;
+}
+ .IconoAgregarDefinicion{
+     height: var(--AlturaIconoAgregarDefinicion);
+     text-align: center;
+     display:block;
 }

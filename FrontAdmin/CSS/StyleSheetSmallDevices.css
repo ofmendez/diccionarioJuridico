@@ -8,5 +8,11 @@
        --MenuSeparacionElementos: 6%;
       /*Fuentes*/
        --TamanoFuenteParrafos: 14px;
+        /* Página Home */
+     --PaddingContenidosHome: 32px;
+     /* Subpaginas */
+     --SeccionSuperiorOrden: row;
+     --SeccionSuperiorAlineacion: center;
+     --BuscadorInputWidth: 300px;
   }
 }

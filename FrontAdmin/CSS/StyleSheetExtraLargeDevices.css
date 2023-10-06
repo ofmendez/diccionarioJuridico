@@ -16,6 +16,8 @@
     /* Seccion Izquierda y Derecha */
     --SeccionIzquierdaWidth: 60%;
     --SeccionDerechaDisplay: flex;
+    /* Subpaginas*/
+    --FiltrosBusquedaOscultar: block;
     }
 }
 /* ------------------------- MAX MENU SIZE ------------------------- */
