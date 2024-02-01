@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Administrador Diccionario Jurídico Minero-Energético</title>
+      <link rel="stylesheet" href="../CSS/StyleSheet.css">
+      <link rel="stylesheet" href="../CSS/StyleSheetExtraSmallDevices.css">
+      <link rel="stylesheet" href="../CSS/StyleSheetSmallDevices.css">
+      <link rel="stylesheet" href="../CSS/StyleSheetMediumDevices.css">
+      <link rel="stylesheet" href="../CSS/StyleSheetLargeDevices.css">
+      <link rel="stylesheet" href="../CSS/StyleSheetExtraLargeDevices.css">
+      <link rel="icon" type="image/x-icon" href="../../Public/Images/Favicon.png">
+      <meta name="view-transition" content="same-origin" />
+   </head>
+   <body>
+      <div class="ContenedorAplicativo">
+         <!-- ----------------- INICIO MENÚ LATERAL ----------------- -->
+         <!-- Menu Vertical -->
+         <div id="ContenedorMenuLateral">
+            <div class="MenuLateral" id="MenuLateral">
+               <div class="MenuLateralSeccion">
+                  <img class="LogoMenuLateral" src="../../Public/Images/LogoBlanco.svg"/>
+                  <ul class="MenuLateralLista">
+                     <li>
+                        <a href="Home.html">
+                           <div class="ContenedorItemMenuLateral"><img class="IconosMenuLateral" src="../../Public/Images/Icons/Inicio.svg"/> Inicio</div>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="Users.html">
+                           <div class="ContenedorItemMenuLateral"><img class="IconosMenuLateral" src="../../Public/Images/Icons/Perfil.svg"/> Usuarios</div>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="Terms.html">
+                           <div class="ContenedorItemMenuLateral ItemMenuActivo"><img class="IconosMenuLateral" src="../../Public/Images/Icons/Palabras.svg"/> Términos</div>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="MenuLateralSeccion InformacionPropiedadAplicativo">
+                  © 2023 Explore Diccionario
+                  Jurídico Minero-Energético.
+               </div>
+            </div>
+         </div>
+         <!-- Overlay -->
+         <div class="OverlayMenu" id="OverlayMenu" onclick="cerrarMenuLateral()" style="visibility:hidden;"></div>
+         <!-- ----------------- FIN MENÚ LATERAL ----------------- -->
+         <!-- ----------------- INICIO CONTENIDO PÁGINA ----------------- -->
+         <div class="ContenidoPagina" id="ContenidoPagina">
+            <!-- ----------------- INICIO BARRA SUPERIOR MOVIL ----------------- -->
+            <div class="SeccionBarraSuperiorMovil">
+               <div class="SeccionHeader">
+                  <div class="SeccionHeaderIzquierda"><a onclick="abrirMenuLateral()"><img class="IconoMenu" src="../../Public/Images/Icons/Menu.svg"/></a></div>
+                  <div class="SeccionHeaderDerecha"><img class="LogoPrincipal" src="../../Public/Images/LogoPositivo.svg"/></div>
+               </div>
+               <div class="SeparadorSeccionPrincipal"></div>
+            </div>
+            <!-- ----------------- FIN BARRA SUPERIOR MOVIL ----------------- -->
+            <!-- ----------------- INICIO MENSAJE SUPERIOR Y ESTADÍSTICAS ----------------- -->
+            <div class="SeccionSuperiorHerramientas" id="SeccionMensajeEstadisticas">
+               <div class="SeccionContenedorBuscador">
+                  <!-- Seccion Buscador -->
+                  <div class="SeccionBuscador">
+                     <form class="FormaBuscador" action="/action_page.php">
+                        <div class="SeccionInputBuscadorCompleto">
+                           <img class="IconoLupa" src="../../Public/Images/Icons/Lupa.svg"/>
+                           <input class="InputBuscadorCompleto" type="text" placeholder="Buscar" name="buscar">
+                        </div>
+                        <input class="SubmitBusqueda" type="submit" value="BUSCAR">
+                     </form>
+                  </div>
+               </div>
+            </div>
+            <!-- ----------------- FIN MENSAJE SUPERIOR ----------------- -->
+            <!-- ----------------- INICIO CONTENIDO HOME ----------------- -->
+            <div class="SeccionContenidoHome" id="SeccionContenidoHome">
+               <div class="SeccionContenidoPaginaBuscador">
+                <div class="SeccionBotonFiltros">
+                  <a id="BotonAbrirFiltros" onclick="desplegarFiltros()"><div class="BotonAgregar"><img class="IconoMenu" src="../../Public/Images/Icons/Filtrar.svg"/>Filtrar Resultados</div></a>
+                  <a id="BotonCerrarFiltros" onclick="contraerFiltros()"><div class="BotonAgregar"><img class="IconoMenu" src="../../Public/Images/Icons/Filtrar.svg"/>Cerrar Filtros</div></a>
+                </div>  
+               <div class="SeccionContenidoBuscadorFiltros" id="SeccionFiltros">
+                  <h3>Filtros</h3><br>
+                  <form action="/action_page.php" class="FormaBuscadorFiltros">
+                     <div class="CategoriasBuscador"><div><h4>Materia</h4>
+                     <input type="checkbox" id="MateriaJurisprudencia" name="MateriaJurisprudencia" value="MateriaJurisprudencia" checked>
+                     <label class="LabelBuscadorFiltros" for="MateriaJurisprudencia"> Jurisprudencia</label><br>
+                     <input type="checkbox" id="MateriaDoctrina" name="MateriaDoctrina" value="MateriaDoctrina" checked>
+                     <label class="LabelBuscadorFiltros" for="MateriaDoctrina"> Doctrina</label><br>
+                     <input type="checkbox" id="MateriaNorma" name="MateriaNorma" value="MateriaNorma" checked>
+                     <label class="LabelBuscadorFiltros" for="MateriaNorma"> Norma</label><br><br></div>
+                     <div><h4>Sección contenido</h4>
+                     <input type="checkbox" id="SeccionTermino" name="SeccionTermino" value="SeccionTermino" checked>
+                     <label class="LabelBuscadorFiltros" for="SeccionTermino"> Término</label><br>
+                     <input type="checkbox" id="SeccionDescriptor" name="SeccionDescriptor" value="SeccionDescriptor" checked>
+                     <label class="LabelBuscadorFiltros" for="SeccionDescriptor"> Descriptor</label><br>
+                     <input type="checkbox" id="SeccionDefinicion" name="SeccionDefinicion" value="SeccionDefinicion" checked>
+                     <label class="LabelBuscadorFiltros" for="SeccionDefinicion"> Definición</label><br>
+                     <input type="checkbox" id="SeccionFuente" name="SeccionFuente" value="SeccionFuente" checked>
+                     <label class="LabelBuscadorFiltros" for="SeccionFuente"> Fuente</label><br><br></div></div>
+                     <div><input class="SubmitBusquedaFiltros" type="submit" value="BUSCAR"></div>
+                   </form>
+               </div>
+               <div class="SeccionContenidoBuscadorResultados">
+                  <h3>Resultados</h3><br>
+                  <div class="ResultadoBusqueda">
+                     <p class="ResultadoBusquedaTermino"><mark>Acciones judiciales</mark> de asuntos mineros y ambientales</p>
+                  </div>
+                  <hr class="ResultadoBusquedaSeparador">
+                  <div class="ResultadoBusqueda">
+                     <p class="ResultadoBusquedaDescriptor">Conciliación extrajudicial no obligatoria frente a pretensiones no económicas. </p>
+                     <p class="ResultadoBusquedaAno">2016</p>
+                     <p class="ResultadoBusquedaDefinicion">...demandante radica solamente en continuar con el trámite de legalización de explotaciones mineras iniciado ante la <mark>entidad demandada</mark>, a fin de seguir desarrollando la actividad de minería tradicional. Bajo ese entendido, considera...</p>
+                     <p class="ResultadoBusquedaFuente">Sentencia del 22 de abril de 2016. Exp.54489, Consejo de Estado, Sala de lo Contencioso Administrativo, Sección Tercera, C. P.: RAMIRO DE JESÚS PAZOS GUERRERO.</p>
+                  </div>
+                  <hr class="ResultadoBusquedaSeparador">
+                  <div class="ResultadoBusqueda">
+                     <p class="ResultadoBusquedaDescriptor">Conciliación extrajudicial no obligatoria frente a pretensiones no económicas. </p>
+                     <p class="ResultadoBusquedaAno">2016</p>
+                     <p class="ResultadoBusquedaDefinicion">...demandante radica solamente en continuar con el trámite de legalización de <mark>explotaciones mineras</mark> iniciado ante la entidad demandada, a fin de seguir desarrollando la actividad de minería tradicional. Bajo ese entendido, considera...</p>
+                     <p class="ResultadoBusquedaFuente">Sentencia del 22 de abril de 2016. Exp.54489, Consejo de Estado, Sala de lo Contencioso Administrativo, Sección Tercera, C. P.: RAMIRO DE JESÚS PAZOS GUERRERO.</p>
+                  </div>
+               </div>
+            </div>
+            </div>
+            <!-- ----------------- FIN CONTENIDO HOME ----------------- -->
+         </div>
+      </div>
+      </div>
+      <!-- ----------------- IMPORT JS ----------------- -->
+      <script src="../JS/JS.js"></script>
+   </body>
+</html>

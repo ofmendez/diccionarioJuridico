@@ -48,3 +48,16 @@ addEventListener("resize", (event) => {
     definirAlturaMensajeEstadisticas();
 });
 
+// PÁGINA BUSCADOR - Funcionamiento Botón Filtros Movil
+function desplegarFiltros() {
+    document.getElementById('SeccionFiltros').style.display = "block";
+    document.getElementById('BotonAbrirFiltros').style.display = "none";
+    document.getElementById('BotonCerrarFiltros').style.display = "block";
+    
+}
+function contraerFiltros() {
+    document.getElementById('SeccionFiltros').style.display = "none";
+    document.getElementById('BotonAbrirFiltros').style.display = "block";
+    document.getElementById('BotonCerrarFiltros').style.display = "none";
+    
+}
