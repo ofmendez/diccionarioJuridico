@@ -884,6 +884,7 @@ mark{
 
 .SeccionContenidoPaginaBuscador{
     display:flex;
+    width:100%;
     gap:2vw;
     flex-direction: var(--OrientacionBusqueda);
 }
